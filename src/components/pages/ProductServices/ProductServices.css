@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+html,
+body,
+.outer-container,
+.container {
+  scroll-behavior: smooth;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/*
+Drag functionality build 2021-03-23
+*/
+.draggable {
+  cursor: move; /* fallback: no `url()` support or images disabled */
+  cursor: url("http://in-poin.mahenza.com/wp-content/uploads/2021/03/home-icon.png"); /* fallback: Chrome 1-21, Firefox 1.5-26, Safari 4+, IE, Edge 12-14, Android 2.1-4.4.4 */
+  cursor: grab; /* W3C standards syntax, all modern browser */
+}
+
+.draggable:active {
+  cursor: url("http://in-poin.mahenza.com/wp-content/uploads/2021/03/home-icon.png");
+  cursor: grabbing;
+}
+
+/*
+Menubar build 2021-03-23
+*/
+.topbar {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  margin-top: 0;
+  background: transparent;
+  background-size: 100% 100%;
+  background-color: transparent;
+  background-repeat: no-repeat;
+}
+.topbar img {
+  position: absolute;
+  top: 20px;
+  left: 107px;
+}
+
+.topbar nav {
+  position: absolute;
+  top: 20px;
+  right: 107px;
+}
+
+.outer-container {
+  width: 100vh;
+  height: 100vw;
+  transform: rotate(-90deg) translateX(-100vh);
+  transform-origin: top left;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: absolute;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.container-product-services {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  transform: rotate(90deg) translateY(-100vh);
+  transform-origin: top left;
+}
+.container-product-services section {
+/*testing container --*/  
+  /* border: 1px dashed blue;
+  box-sizing: border-box; */
+/*--eof testing container --*/ 
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(68.61deg, #C5B2D3 -0.98%, #E9E0E5 25.66%, #D9BBBE 100%);}
+
+.container-product-services section:nth-child(2) {
+  background: linear-gradient(280.44deg, #AC4884 -42.59%, #B2D1F2 22.92%, #D9BBBE 97.78%);}
+
+.container-product-services section:nth-child(3) {
+  background: linear-gradient(280.44deg, #AC4884 -42.59%, #B2D1F2 22.92%, #B0A5CE 97.78%);
+}
+
+.container-product-services section:nth-child(4) {
+  background: linear-gradient(103.92deg, #B1B7DD 0%, #EB79A0 111.76%);
+}
+.container-product-services section:nth-child(5) {
+  background: linear-gradient(104.04deg, #DB8BB2 0%, #83AEFE 100%);
+}
+.container-product-services section .content {
+  max-width: auto;
+  padding: 40px;
+  text-align: center;
+}
+
+@media screen and (min-width: 1550px) and (min-width: 426px){
+  .tilt-me-display{
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  div.scrollmenu {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+  div.scrollmenu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+
+  div.scrollmenu a:hover {
+    background-color: #777;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .tilt-me-display{
+    padding-top: 5%;
+    display: -ms-grid;
+  }
+  .tilt-me-header{
+    padding-top: 15%;
+    font-family: "Work Sans", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #303030;
+    text-transform: uppercase;
+  }
+  .tilt-me-subheader{
+    font-family: "AlphaMack AOE";
+    color: #ee2e31;
+    font-size: 90px;
+    font-weight: normal;
+    font-style: normal;
+    text-transform: capitalize;
+    text-align: center;
+  }
+
+  .topbar{
+  display: none;
+  }
+
+  .outer-container {
+  display: none;
+  }
+}

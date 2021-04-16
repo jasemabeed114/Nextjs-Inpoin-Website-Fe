@@ -1,0 +1,1 @@
+export { default } from '../components/pages/Home/MF_Home.jsx';

@@ -1,0 +1,96 @@
+{
+  "name": "landingpage-inpoin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "precommit": "npm run lint && npm run test",
+    "test": "jest",
+    "test:cover": "npm run test -- --coverage ",
+    "dev": "node ./src/server.js",
+    "build": "next build ./src ",
+    "start": "next start ./src",
+    "lint": "esw src/utils src/components --color",
+    "lint:watch": "npm run lint -- -w",
+    "storybook": "start-storybook -s ./src -p 5000",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.playcourt.id/telkomdev/codebase-frontend-ssr.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "axios": "^0.21.1",
+    "crypto-js": "^4.0.0",
+    "dotenv": "^8.2.0",
+    "final-form": "^4.20.1",
+    "fs": "0.0.1-security",
+    "nanoid": "^3.1.22",
+    "next": "^10.0.5",
+    "nookies": "^2.5.2",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-final-form": "^6.5.2",
+    "react-icons": "^4.2.0",
+    "styled-components": "^5.2.1",
+    "swiper": "^6.5.3",
+    "swr": "^0.3.11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.0",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "@babel/runtime": "^7.12.5",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.3",
+    "@testing-library/user-event": "^12.6.0",
+    "autoprefixer": "^10.2.1",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^8.2.5",
+    "babel-jest": "^24.3.1",
+    "babel-plugin-styled-components": "^1.12.0",
+    "eslint": "^7.16.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-watch": "^7.0.0",
+    "husky": "^4.3.7",
+    "jest": "^26.6.3",
+    "jest-cli": "^26.6.3",
+    "jest-environment-jsdom-fifteen": "^1.0.2",
+    "postcss": "^8.2.4",
+    "react-addons-test-utils": "^15.6.2",
+    "react-test-renderer": "^17.0.1"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/tools/assetsTransformer.js",
+      "\\.(css|less)$": "<rootDir>/tools/assetsTransformer.js"
+    },
+    "collectCoverageFrom": [
+      "src/components/**/*.js",
+      "src/pages/**/*.js",
+      "src/utils/**/*.js",
+      "src/hooks/**/*.js"
+    ],
+    "testEnvironment": "jest-environment-jsdom-fifteen",
+    "moduleDirectories": [
+      "node_modules",
+      "src",
+      "__dirname"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run precommit"
+    }
+  }
+}

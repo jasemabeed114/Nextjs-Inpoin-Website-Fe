@@ -1,0 +1,203 @@
+/*
+/ last updated: 13/04/2021
+/ @author: mahenza
+*/
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@900&display=swap");
+/* @import url("../../assets/fonts/alpha-mac-aoe/alpha-mac-aoe.css"); */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+html,
+body,
+.outer-container,
+.container {
+  scroll-behavior: smooth;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/*
+Drag functionality build 2021-03-23
+*/
+.draggable {
+  cursor: move; /* fallback: no `url()` support or images disabled */
+  cursor: url("http://in-poin.mahenza.com/wp-content/uploads/2021/03/home-icon.png"); /* fallback: Chrome 1-21, Firefox 1.5-26, Safari 4+, IE, Edge 12-14, Android 2.1-4.4.4 */
+  cursor: grab; /* W3C standards syntax, all modern browser */
+}
+
+.draggable:active {
+  cursor: url("http://in-poin.mahenza.com/wp-content/uploads/2021/03/home-icon.png");
+  cursor: grabbing;
+}
+/*
+Menubar build 2021-03-23
+*/
+.topbar {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  margin-top: 0;
+  background: transparent;
+  background-size: 100% 100%;
+  background-color: transparent;
+  background-repeat: no-repeat;
+}
+
+.topbar img {
+  position: absolute;
+  top: 20px;
+  left: 107px;
+}
+
+.topbar nav {
+  position: absolute;
+  top: 20px;
+  right: 107px;
+}
+
+.outer-container {
+  width: 100vh;
+  height: 100vw;
+  transform: rotate(-90deg) translateX(-100vh);
+  transform-origin: top left;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: absolute;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.container-home {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  transform: rotate(90deg) translateY(-100vh);
+  transform-origin: top left;
+}
+.container-home section {
+/*testing container --*/  
+  /* border: 1px dashed blue;
+  box-sizing: border-box; */
+/*--eof testing container --*/ 
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('/src/assets/images/img-overlay/bg-aboutUs-home-overlay.svg'), linear-gradient(95.65deg, #f1f2f7 -19.48%, #d9bbbe 100%);
+}
+
+.container-home section:nth-child(2) {
+  background: url('/src/assets/images/img-overlay/bg-ourServices-overlay.svg'), linear-gradient(255.96deg, #a8d7ff 0%, #d9bbbe 100%);
+}
+.container-home section:nth-child(3) {
+  background: url('/src/assets/images/img-overlay/bg-experienceDashboard-home.svg'), linear-gradient(104.04deg, #a8d7ff 6.77%, #ec779e 100%);
+}
+.container-home section:nth-child(4) {
+  background: url('/src/assets/images/img-overlay/bg-basedOnIndustry-overlay.svg'), linear-gradient(276.66deg, #e9a882 5.57%, #e581a8 86.94%);
+}
+.container-home section:nth-child(5) {
+  background: url('/src/assets/images/img-overlay/bg-listPartnerFAQ.svg'), linear-gradient(270.7deg, #c2aaf3 0.64%, #e9a882 99.49%);
+}
+.container-home section:nth-child(6) {
+  background: url('/src/assets/images/img-overlay/bg-joinUs.svg'), linear-gradient(90deg, #c2aaf3 0.64%, #ece6ea 99.49%);
+}
+
+.row {  
+  display: flex;
+}
+
+.side {
+  flex: 40%;
+  padding: 20px;
+}
+
+.main {
+  flex: 60%;
+  padding: 20px;
+}
+
+@media (max-width: 991px) {
+    div.scrollmenu {
+    /* background-color: rgba(238, 46, 49); */
+    background-color: white;
+    overflow: auto;
+    white-space: nowrap;
+    width: auto;
+  }
+
+  div.scrollmenu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+
+  div.scrollmenu a:hover {
+    /* background-color: #777; */
+    background-color: transparent;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .tilt-me-display{
+    padding-top: 5%;
+    display: -ms-grid;
+  }
+  .tilt-me-header{
+    padding-top: 15%;
+    font-family: "Work Sans", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #303030;
+    text-transform: uppercase;
+  }
+  .tilt-me-subheader{
+    font-family: "AlphaMack AOE";
+    color: #ee2e31;
+    font-size: 90px;
+    font-weight: normal;
+    font-style: normal;
+    text-transform: capitalize;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1550px) and (min-width: 426px), (orientation: landscape){
+  .tilt-me-display{
+    display: none;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 760px) {
+    /* .container-home section {
+      background: linear-gradient(95.65deg, #f1f2f7 -19.48%, #d9bbbe 100%);
+    } */
+    .container-home section:nth-child(2) {
+      background: linear-gradient(255.96deg, #a8d7ff 0%, #d9bbbe 100%);
+    }
+    .container-home section:nth-child(3) {
+      background: linear-gradient(104.04deg, #a8d7ff 6.77%, #ec779e 100%);
+    }
+    .container-home section:nth-child(4) {
+      background: linear-gradient(276.66deg, #e9a882 5.57%, #e581a8 86.94%);
+    }
+    .container-home section:nth-child(5) {
+      background: linear-gradient(270.7deg, #c2aaf3 0.64%, #e9a882 99.49%);
+    }
+    .container-home section:nth-child(6) {
+      background: linear-gradient(90deg, #c2aaf3 0.64%, #ece6ea 99.49%);
+    }
+}
+
+.mr-8px {
+  margin-right: 8px;
+}

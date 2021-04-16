@@ -1,0 +1,53 @@
+{
+  "env": {
+    "development": {
+      "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react"
+      ],
+      "plugins": [
+        "@babel/plugin-transform-runtime",
+        "@babel/plugin-proposal-class-properties",
+        [
+          "babel-plugin-styled-components",
+          {
+            "ssr": true,
+            "minify": true,
+            "transpileTemplateLiterals": true,
+            "pure": true,
+            "displayName": true,
+            "preprocess": false
+          }
+        ]
+      ]
+    },
+    "production": {
+      "presets": [
+        ["@babel/preset-env", { "targets": { "ie": 9, "uglify": true } }],
+        "@babel/preset-react"
+      ],
+      "plugins": [
+        "@babel/plugin-transform-runtime",
+        "@babel/plugin-proposal-class-properties",
+        [
+          "babel-plugin-styled-components",
+          {
+            "ssr": true,
+            "minify": true,
+            "transpileTemplateLiterals": true,
+            "pure": true,
+            "displayName": true,
+            "preprocess": false
+          }
+        ]
+      ]
+    },
+    "test": {
+      "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react"
+      ],
+      "plugins": ["@babel/plugin-transform-runtime"]
+    }
+  }
+}
