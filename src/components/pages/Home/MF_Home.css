@@ -82,10 +82,6 @@ Menubar build 2021-03-23
   transform-origin: top left;
 }
 .container-home section {
-/*testing container --*/  
-  /* border: 1px dashed blue;
-  box-sizing: border-box; */
-/*--eof testing container --*/ 
   min-width: 100%;
   display: flex;
   justify-content: center;
@@ -110,23 +106,8 @@ Menubar build 2021-03-23
   background: url('/src/assets/images/img-overlay/bg-joinUs.svg'), linear-gradient(90deg, #c2aaf3 0.64%, #ece6ea 99.49%);
 }
 
-.row {  
-  display: flex;
-}
-
-.side {
-  flex: 40%;
-  padding: 20px;
-}
-
-.main {
-  flex: 60%;
-  padding: 20px;
-}
-
 @media (max-width: 991px) {
     div.scrollmenu {
-    /* background-color: rgba(238, 46, 49); */
     background-color: white;
     overflow: auto;
     white-space: nowrap;
@@ -142,7 +123,6 @@ Menubar build 2021-03-23
   }
 
   div.scrollmenu a:hover {
-    /* background-color: #777; */
     background-color: transparent;
   }
 }
@@ -153,9 +133,8 @@ Menubar build 2021-03-23
     display: -ms-grid;
   }
   .tilt-me-header{
-    padding-top: 15%;
     font-family: "Work Sans", sans-serif;
-    font-size: 30px;
+    font-size: 15px;
     font-weight: bold;
     color: #303030;
     text-transform: uppercase;
@@ -170,32 +149,33 @@ Menubar build 2021-03-23
     text-align: center;
   }
 }
-
+/* hiding tilt me display on landscape*/
 @media screen and (max-width: 1550px) and (min-width: 426px), (orientation: landscape){
   .tilt-me-display{
     display: none;
   }
 }
 
-@media (min-width: 320px) and (max-width: 760px) {
-    /* .container-home section {
-      background: linear-gradient(95.65deg, #f1f2f7 -19.48%, #d9bbbe 100%);
-    } */
-    .container-home section:nth-child(2) {
-      background: linear-gradient(255.96deg, #a8d7ff 0%, #d9bbbe 100%);
+/* moving icons*/
+@media screen and (min-width: 426px), (orientation: portrait){
+  .fa {
+    font-size: 10em;
+    animation: rotateLandscape 2s steps(5, end) 0s infinite;
+    margin-bottom: 25px;
+    transform: none;
+  }
+
+  @keyframes rotateLandscape {
+    0% {
+      transform: none;
     }
-    .container-home section:nth-child(3) {
-      background: linear-gradient(104.04deg, #a8d7ff 6.77%, #ec779e 100%);
+    60% {
+      transform: rotate(90deg);
     }
-    .container-home section:nth-child(4) {
-      background: linear-gradient(276.66deg, #e9a882 5.57%, #e581a8 86.94%);
+    100% {
+      transform: rotate(90deg);
     }
-    .container-home section:nth-child(5) {
-      background: linear-gradient(270.7deg, #c2aaf3 0.64%, #e9a882 99.49%);
-    }
-    .container-home section:nth-child(6) {
-      background: linear-gradient(90deg, #c2aaf3 0.64%, #ece6ea 99.49%);
-    }
+  }
 }
 
 .mr-8px {

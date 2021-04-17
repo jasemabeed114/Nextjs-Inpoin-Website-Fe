@@ -1,7 +1,8 @@
 //
-// last updated: 13/04/2021
+// last updated: 16/04/2021
 // @author: mahenza
 import React, { Component } from 'react';
+import { FaMobile } from "react-icons/fa"
 
 import Link from 'next/link';
 import { Button, Grid } from '@material-ui/core/';
@@ -20,15 +21,17 @@ import {
 import {
   Dialog,
   DialogDescription,
-  DialogContent
+  DialogContent,
+  DialogShowLandscape
 } from '../../elements/Dialog/Dialog.elements';
 
 import {
   TourWelcomeRedTitle
 } from '../../elements/TourWelcomeView/TourWelcomeView.elements';
 
-class MF_Home extends Component {
 
+class MF_Home extends Component {
+  
   state = {
     showDialog: this.props.from !== 'tour',
   }
@@ -39,8 +42,10 @@ class MF_Home extends Component {
 
   _renderDialogStartGame = () => {
     const { showDialog } = this.state;
+
     return (
-      <Dialog open={showDialog} onClose={this._handleCloseDialog}>
+      <DialogShowLandscape open={showDialog} onClose={this._handleCloseDialog}>
+        {/* <Dialog open={showDialog} onClose={this._handleCloseDialog}> */}
         <DialogContent>
           <img src="http://in-poin.mahenza.com/wp-content/uploads/2021/02/inpoin_logo_svg.png" />
           <TourWelcomeRedTitle>Welcome</TourWelcomeRedTitle>
@@ -56,7 +61,8 @@ class MF_Home extends Component {
             </Grid>
           </Grid>
         </DialogContent>
-      </Dialog>
+      {/* </Dialog> */}
+      </DialogShowLandscape>
     );
   }
 
@@ -70,7 +76,9 @@ class MF_Home extends Component {
         <div className="tilt-me-display">
           <img src="http://in-poin.mahenza.com/wp-content/uploads/2021/02/inpoin_logo_svg.png"></img>
           <h2 className="tilt-me-subheader">Feel The Gamification Experience</h2>
-          <h3 className="tilt-me-header"> Rotate your screen (90 &deg;)</h3>
+          <FaMobile className="fa" style={{ fontSize: 60 }} />
+          <h3 className="tilt-me-header"> Rotate your device (90 &deg;)</h3>
+          
         </div>
         <div className="outer-container scrollmenu">
           <div className="container-home draggable">
