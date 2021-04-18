@@ -59,7 +59,7 @@ export default class Component extends React.Component {
   render() {
     const { data } = this.props;
     return (
-      <div style={{ maxWidth: '580px'}}>
+      <div style={{ maxWidth: '680px'}}>
         {
           data.map((item, index) => this._renderItem(item, index))
         }

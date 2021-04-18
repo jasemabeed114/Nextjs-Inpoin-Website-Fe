@@ -2,14 +2,14 @@ import React, { Component } from "react";
 import { 
     ContentWrapper,
     Description,
+    MobileDescription,
     FAQWrapper,
     Logo,
     LogoWrapper,
-    ListParnerFAQ,
-    ListParnerFAQTitle,
-    ListParnerFAQBlackTitle,
-    ListParnerFAQRedTitle,
-    ListParnerFAQGroup,
+    ListPartnerFAQ,
+    ListPartnerFAQBlackTitle,
+    ListPartnerFAQRedTitle,
+    ListPartnerFAQGroup,
     SectionWrapper,
     SectionPartner,
 } from "../ListPartnersFAQView/ListPartnersFAQView.elements";
@@ -149,24 +149,28 @@ class ListPartnersFAQView extends Component{
 
     return(
       <ContentWrapper>
-        <ListParnerFAQ>
+        <ListPartnerFAQ>
           <SectionWrapper>
             <SectionPartner>
               <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-                <ListParnerFAQBlackTitle>
+                <ListPartnerFAQBlackTitle>
                   Project
-                </ListParnerFAQBlackTitle>
-                <ListParnerFAQRedTitle>
+                </ListPartnerFAQBlackTitle>
+                <ListPartnerFAQRedTitle>
                   Portfolio
-                </ListParnerFAQRedTitle>
+                </ListPartnerFAQRedTitle>
               </div>
-
               <Description>
                 Fulfilling their business objectives and increase their costumer loyalty, Inpoin has the previlege of working with some of the most costumer centric companies
               </Description>
+              <MobileDescription>
+                Fulfilling their business objectives and increase <br/>
+                their costumer loyalty, Inpoin has the previlege of <br />
+                working with some of the most costumer centric companies.
+              </MobileDescription>
             </SectionPartner>
             <SectionPartner>
-              <ListParnerFAQGroup>
+              <ListPartnerFAQGroup>
                 <Swiper breakpoints={sliderBreakpoints} hideBullet slidesPerView={'auto'} spaceBetween={10}>
                   <SwiperSlide>
                     <LogoWrapper>
@@ -190,49 +194,74 @@ class ListPartnersFAQView extends Component{
                   </SwiperSlide>
                   <SwiperSlide>
                     <LogoWrapper>
-                      <Logo src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/8.-Visual-Logo-Project-Portofolio-1-MyPertamina.png"></Logo>
+                      <Logo src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/12.-Visual-Logo-Project-Portofolio-5-LinkAJA.png" />
                     </LogoWrapper>
                   </SwiperSlide>
                   <SwiperSlide>
                     <LogoWrapper>
-                      <Logo src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/10.-Visual-Logo-Project-Portofolio-2-myIndiHome-Partner.png"></Logo>
+                      <Logo src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/13.-Visual-Logo-Project-Portofolio-6-myTDS.png"/>
                     </LogoWrapper>
                   </SwiperSlide>
                   <SwiperSlide>
                     <LogoWrapper>
-                      <Logo src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/10.-Visual-Logo-Project-Portofolio-3-QRen.png"></Logo>
+                      <Logo src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/14.-Visual-Logo-Project-Portofolio-7-HKTI.png"/>
                     </LogoWrapper>
                   </SwiperSlide>
                   <SwiperSlide>
                     <LogoWrapper>
-                      <Logo src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/11.-Visual-Logo-Project-Portofolio-4-myIndiHome.png"></Logo>
+                      <Logo src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/15.-Visual-Logo-Project-Portofolio-8-Smart-Business.png" />
+                    </LogoWrapper>
+                  </SwiperSlide>
+
+                  <SwiperSlide>
+                    <LogoWrapper>
+                      <Logo src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/16.-Visual-Logo-Project-Portofolio-9-Jak-Lingko.png" />
+                    </LogoWrapper>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <LogoWrapper>
+                      <Logo src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/17.-Visual-Logo-Project-Portofolio-10-MyDigibiz.png" />
+                    </LogoWrapper>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <LogoWrapper>
+                      <Logo src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/18.-Visual-Logo-Project-Portofolio-11-alodokter.png" />
+                    </LogoWrapper>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <LogoWrapper>
+                      <Logo src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/19.-Visual-Logo-Project-Portofolio-12-Studext.png" />
+                    </LogoWrapper>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <LogoWrapper>
+                      <Logo src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/20.-Visual-Logo-Project-Portofolio-13-Bonum.png" />
                     </LogoWrapper>
                   </SwiperSlide>
                 </Swiper>
-              </ListParnerFAQGroup>  
+              </ListPartnerFAQGroup>  
             </SectionPartner>
           </SectionWrapper>
           <SectionWrapper>
             <div style={{ flex: 1, alignSelf: 'center' }}>
-              <ListParnerFAQBlackTitle>
+              <ListPartnerFAQBlackTitle>
                 FAQ
-              </ListParnerFAQBlackTitle>
+              </ListPartnerFAQBlackTitle>
               <Description>
                 Peoples usually ask about
               </Description>
+              <MobileDescription>
+                Peoples usually ask about
+              </MobileDescription>
             </div>
 
-            <div style={{ flex: 1 }}>
-              <ListParnerFAQTitle>
+            <div style={{ flex: 1, alignSelf: 'center' }}>
                 <FAQWrapper>
                   <Accordion data={faq} />
                 </FAQWrapper>
-              </ListParnerFAQTitle>
             </div>
-
-
           </SectionWrapper>
-        </ListParnerFAQ>             
+        </ListPartnerFAQ>             
       </ContentWrapper>
     );
   }

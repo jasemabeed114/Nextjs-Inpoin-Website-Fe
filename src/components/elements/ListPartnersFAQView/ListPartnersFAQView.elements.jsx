@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import device from "../../utils/device"
 
 export const ContentWrapper = styled.div`
   width: 100%;
@@ -7,43 +8,45 @@ export const ContentWrapper = styled.div`
   padding-left: 5%;
 `;
 
-export const ListParnerFAQ = styled.div`
+export const ListPartnerFAQ = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
 `;
 
-export const ListParnerFAQGroup = styled.div`
+export const ListPartnerFAQGroup = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   text-align: start;
   width: 100%;
   position: relative;
+@media screen and ${device.tabletL} and (min-width: 426px) {
+    display: none;
+  }
 `;
 
-export const ListParnerFAQTitle = styled.div`
+export const ListPartnerFAQTitle = styled.div`
   display: flex;
   align-items: center;
+@media screen and ${device.tabletL} and (min-width: 426px) {
+    font-size: 50px;
+  }
 `;
 
-export const ListParnerFAQBlackTitle = styled.h2`
-  @media(max-width: 768px) {
-    font-size: 32px;
-  }
+export const ListPartnerFAQBlackTitle = styled.h2`
   font-family: "Work Sans", sans-serif;
   font-size: 60px;
   font-weight: bold;
   color: #303030;
   text-transform: uppercase;
   text-align: left;
+  @media screen and ${device.tabletL} and (min-width: 426px) {
+    font-size: 30px;
+  }
 `;
 
-export const ListParnerFAQRedTitle = styled.span`
-  @media(max-width: 768px) {
-    font-size: 68px;
-    line-height: 0.7;
-  }
+export const ListPartnerFAQRedTitle = styled.span`
   font-family: "AlphaMack AOE";
   color: #ee2e31;
   font-size: 90px;
@@ -51,45 +54,64 @@ export const ListParnerFAQRedTitle = styled.span`
   font-style: normal;
   text-transform: capitalize;
   text-align: left;
+  @media screen and ${device.tabletL} and (min-width: 426px) {
+    font-size: 50px;
+  }
 `;
 
 export const Description = styled.p`
-  @media(max-width: 768px) {
-    font-size: 18px;
-    margin-bottom: 16px;
-  }
+  font-family: "Work Sans", sans-serif;
   font-size: 20px;
-  text-align: justify !important;
+  text-align: justify;
+  inline-size: auto;
+  writing-mode: horizontal-tb;
   line-height: 150%;
-  max-width: 382px;
+  padding-right: 15%;
+  @media screen and ${device.tabletL} and (min-width: 426px) {
+    display: none;
+  }
+`;
+
+export const MobileDescription = styled.p`
+  display: none;
+  @media screen and ${device.tabletL} and (min-width: 426px) {
+    display: block;
+    font-family: "Work Sans", sans-serif;
+    font-size: 12px;
+  }
 `;
 
 export const Spacing = styled.div`
   padding-bottom: 5%;
 `;
 
-export const Slider = styled.div`
- 
-`;
+export const Slider = styled.div``;
 
 export const LogoWrapper = styled.div`
   background-color: #FFFFFF;
   border-radius: 16px;
   width: 160px;
   height: 90px;
-  display: flex !important;
+  display: flex;
   align-items: center;
+ @media screen and ${device.tabletL} and (min-width: 426px) {
+    width: 80px;
+    height: 45px;
+  }
 `;
 
 export const Logo = styled.img`
-  width: 152px;
-  height: 54px;
+  width: 100%;
+  //height: 54px;
 `;
 
 export const FAQWrapper = styled.div`
   width: auto;
-  height: auto;
-  overflow: scroll;
+  height: 35vh;
+  overflow-y: auto;
+ @media screen and ${device.tabletL} and (min-width: 426px) {
+    display: none;
+  }
 `;
 
 export const Accordion = styled.button`
@@ -126,15 +148,15 @@ export const SectionWrapper = styled.div`
   @media(max-width: 768px) {
     flex-direction: column;
   }
-
   display: flex;
 `;
 
 export const SectionPartner = styled.div`
-  @media(max-width: 768px) {
-    width: 100%;
+  @media screen and ${device.tabletL} and (min-width: 426px) {
+     width: 100%;
   }
   flex: 1;
   width: 50%;
+  align-self: center;
 `;
 
