@@ -90,8 +90,9 @@ export const Slider = styled.div``;
 export const LogoWrapper = styled.div`
   background-color: #FFFFFF;
   border-radius: 16px;
-  width: 160px;
+  width: 140px;
   height: 90px;
+  padding: 5px;
   display: flex;
   align-items: center;
  @media screen and ${device.tabletL} and (min-width: 426px) {
