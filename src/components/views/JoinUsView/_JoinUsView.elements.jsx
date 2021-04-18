@@ -1,9 +1,11 @@
-
+//
+// last updated: 16/04/2021
+// @author: mahenza
 import styled from "styled-components";
 import device from "../../utils/device"
 
 export const ContentWrapper = styled.div`
-  width: 90%;
+  width: 100%;
   display: flex;
   padding-top: 5%;
   padding-left: 5%;
@@ -15,23 +17,19 @@ export const Row = styled.div`
 `;
 
 export const Side = styled.div`
-  flex: 40%;
-  padding-top: 15%;
-
+  flex: 30%;
+  align-self: center;
+  
 @media only screen and ${device.tabletL}{
-  flex: 60%;
-  padding-top: 10%;
+  display: none;
 }
 `;
 
 export const Main = styled.div`
-  flex: 100%;
-
-  align-items: flex-end;
-  padding-top: 5%;
-  padding-left: 20%;
+  flex: 70%;
+  align-self: flex-end;
 @media only screen and ${device.tabletL}{
-  flex: 40%;
+  flex: 100%;
   padding: 5px;
 }
 `;
@@ -75,8 +73,9 @@ export const JoinUsSubtitle = styled.span`
 export const Description = styled.p`
   font-family: "Work Sans", sans-serif;
   font-size: 20px;
-  padding: 20px 0 0 0;
-  text-align: justify !important;
+  text-align: justify;
+  inline-size: auto;
+  writing-mode: horizontal-tb;
   line-height: 150%;
 @media screen and ${device.tabletL} and (min-width: 426px){
   font-size: 12px;

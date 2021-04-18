@@ -2,6 +2,8 @@ import React, { Component } from "react";
 
 import {
     Container,
+    Row,
+    Column,
     Form,
     DataGroup,
     DataLabelGroup,
@@ -11,12 +13,7 @@ import {
     DataDropdown,
     DataDropdownItem,
     DataTextArea,
-    SubmitButton,
-    MultiSelect,
-    SelectBox,
-    OverSelect,
-    CheckBoxes,
-    CheckBoxesLabel,
+    SubmitButton
 } from "./JoinUsForm.elements";
 
 class JoinUsForm extends Component {
@@ -34,123 +31,132 @@ class JoinUsForm extends Component {
         return (
             <Container>
                 <Form>
-                    <DataGroup>
-                        <DataLabelGroup>
-                            <DataLabel>Full Name</DataLabel>
-                            <ImportantSign> * </ImportantSign>
-                        </DataLabelGroup>
-                        <DataInput
-                            placeholder={"John Doe"}
-                            value={this.state.fullName}
-                            onChange={(e) => this.setState({ fullName: e.target.value })}
-                            required
-                        ></DataInput>
-                    </DataGroup>
-                    <DataGroup>
-                        <DataLabelGroup>
-                            <DataLabel>Email</DataLabel>
-                            <ImportantSign>*</ImportantSign>
-                        </DataLabelGroup>
-                        <DataInput
-                            value={this.state.email}
-                            placeholder={"john.doe@gmail.com"}
-                            onChange={(e) => this.setState({ email: e.target.value })}
-                            type="email"
-                            required
-                        ></DataInput>
-                    </DataGroup>
-                    <DataGroup>
-                        <DataLabelGroup>
-                            <DataLabel>Contact Number</DataLabel>
-                            <ImportantSign>*</ImportantSign>
-                        </DataLabelGroup>
-                        <DataInput
-                            value={this.state.contactNumber}
-                            placeholder={"+62"}
-                            onChange={(e) => this.setState({ contactNumber: e.target.value })}
-                            type="tel"
-                            required
-                        ></DataInput>
-                    </DataGroup>
-                    <DataGroup>
-                        <DataLabelGroup>
-                            <DataLabel>Industry</DataLabel>
-                        </DataLabelGroup>
-                        <DataDropdown
-                            value={this.state.industry}
-                            onChange={(e) => this.setState({ industry: e.target.value })}
-                        >
-                            <DataDropdownItem
-                                value={""} hidden>Select Your Industry                           
+                    <Row>
+                        <Column className="col-left">
+                            <DataGroup>
+                                <DataLabelGroup>
+                                    <DataLabel>Full Name</DataLabel>
+                                    <ImportantSign> * </ImportantSign>
+                                </DataLabelGroup>
+                                <DataInput
+                                    placeholder={"John Doe"}
+                                    value={this.state.fullName}
+                                    onChange={(e) => this.setState({ fullName: e.target.value })}
+                                    required
+                                ></DataInput>
+                                <br/>
+                            </DataGroup>
+                            <DataGroup>
+                                <DataLabelGroup>
+                                    <DataLabel>Email</DataLabel>
+                                    <ImportantSign>*</ImportantSign>
+                                </DataLabelGroup>
+                                <DataInput
+                                    value={this.state.email}
+                                    placeholder={"john.doe@gmail.com"}
+                                    onChange={(e) => this.setState({ email: e.target.value })}
+                                    type="email"
+                                    required
+                                ></DataInput>
+                            </DataGroup>
+                            <DataGroup>
+                                <DataLabelGroup>
+                                    <DataLabel>Contact Number</DataLabel>
+                                    <ImportantSign>*</ImportantSign>
+                                </DataLabelGroup>
+                                <DataInput
+                                    value={this.state.contactNumber}
+                                    placeholder={"+62"}
+                                    onChange={(e) => this.setState({ contactNumber: e.target.value })}
+                                    type="tel"
+                                    required
+                                ></DataInput>
+                            </DataGroup>
+                        </Column>
+                        <Column>
+                            <DataGroup>
+                                <DataLabelGroup>
+                                    <DataLabel>Industry</DataLabel>
+                                </DataLabelGroup>
+                                <DataDropdown
+                                    value={this.state.industry}
+                                    onChange={(e) => this.setState({ industry: e.target.value })}
+                                >
+                                    <DataDropdownItem
+                                        value={""} hidden>Select Your Industry
                             </DataDropdownItem>
-                            <DataDropdownItem
-                                value={"Healthcare and Services"}>Healthcare and Services
+                                    <DataDropdownItem
+                                        value={"Healthcare and Services"}>Healthcare and Services
                             </DataDropdownItem>
-                            <DataDropdownItem
-                                value={"Banking and Financial Services"}>Banking and Financial Services
+                                    <DataDropdownItem
+                                        value={"Banking and Financial Services"}>Banking and Financial Services
                             </DataDropdownItem>
-                            <DataDropdownItem
-                                value={"Hospitality and Travel"}>Hospitality and Travel
+                                    <DataDropdownItem
+                                        value={"Hospitality and Travel"}>Hospitality and Travel
                             </DataDropdownItem>
-                            <DataDropdownItem
-                                value={"Consumer Goods"}>Consumer Goods
+                                    <DataDropdownItem
+                                        value={"Consumer Goods"}>Consumer Goods
                             </DataDropdownItem>
-                            <DataDropdownItem
-                                value={"Modern Retail"}>Modern Retail
+                                    <DataDropdownItem
+                                        value={"Modern Retail"}>Modern Retail
                             </DataDropdownItem>
-                            <DataDropdownItem
-                                value={"Others"}>Others
+                                    <DataDropdownItem
+                                        value={"Others"}>Others
                             </DataDropdownItem>
-                        </DataDropdown>
-                    </DataGroup>
-                    <DataGroup>
-                        <DataLabelGroup>
-                            <DataLabel>Company</DataLabel>
-                            <ImportantSign> * </ImportantSign>
-                        </DataLabelGroup>
-                        <DataInput
-                            value={this.state.company}
-                            onChange={(e) => this.setState({ company: e.target.value })}
-                            required
-                        ></DataInput>
-                    </DataGroup>
-                    <DataGroup>
-                        <DataLabelGroup>
-                            <DataLabel>Your Gamification Needs</DataLabel>
-                        </DataLabelGroup>
-                        <DataDropdown
-                            value={this.state.gamificationCheck}
-                            onChange={(e) => this.setState({ gamificationCheck: e.target.value })}
-                        >
-                            <DataDropdownItem
-                                value={""} hidden>Choose Your Gamification Needs
+                                </DataDropdown>
+                            </DataGroup>
+                            <DataGroup>
+                                <DataLabelGroup>
+                                    <DataLabel>Company</DataLabel>
+                                    <ImportantSign> * </ImportantSign>
+                                </DataLabelGroup>
+                                <DataInput
+                                    value={this.state.company}
+                                    onChange={(e) => this.setState({ company: e.target.value })}
+                                    required
+                                ></DataInput>
+                            </DataGroup>
+                            <DataGroup>
+                                <DataLabelGroup>
+                                    <DataLabel>Your Gamification Needs</DataLabel>
+                                </DataLabelGroup>
+                                <DataDropdown
+                                    value={this.state.gamificationCheck}
+                                    onChange={(e) => this.setState({ gamificationCheck: e.target.value })}
+                                >
+                                    <DataDropdownItem
+                                        value={""} hidden>Choose Your Gamification Needs
                             </DataDropdownItem>
-                            <DataDropdownItem
-                                value={"Customer Loyalty"}>Customer Loyalty
+                                    <DataDropdownItem
+                                        value={"Customer Loyalty"}>Customer Loyalty
                             </DataDropdownItem>
-                            <DataDropdownItem
-                                value={"Salesforce Team"}>Salesforce Team
+                                    <DataDropdownItem
+                                        value={"Salesforce Team"}>Salesforce Team
                             </DataDropdownItem>
-                            <DataDropdownItem
-                                value={"Training"}>Training
+                                    <DataDropdownItem
+                                        value={"Training"}>Training
                             </DataDropdownItem>
-                            <DataDropdownItem
-                                value={"Others"}>Others
+                                    <DataDropdownItem
+                                        value={"Others"}>Others
                             </DataDropdownItem>
-                        </DataDropdown>
-                    </DataGroup>
-                    <DataGroup>
-                        <DataLabelGroup>
-                            <DataLabel>Message</DataLabel>
-                        </DataLabelGroup>
-                        <DataTextArea
-                            value={this.state.message}
-                            onChange={(e) => this.setState({ message: e.target.value })}
-                            rows={"10"}
-                            cols={"30"}
-                        ></DataTextArea>
-                    </DataGroup>                   
-                    <SubmitButton>Submit</SubmitButton>
+                                </DataDropdown>
+                            </DataGroup>
+                        </Column>
+                        <Column>
+                            <DataGroup>
+                                <DataLabelGroup>
+                                    <DataLabel>Message</DataLabel>
+                                </DataLabelGroup>
+                                <DataTextArea
+                                    value={this.state.message}
+                                    onChange={(e) => this.setState({ message: e.target.value })}
+                                    rows={"10"}
+                                    cols={"30"}
+                                ></DataTextArea>
+                            </DataGroup>
+                            <SubmitButton>Submit</SubmitButton>
+                        </Column>   
+                    </Row>
                 </Form>
             </Container>
         );

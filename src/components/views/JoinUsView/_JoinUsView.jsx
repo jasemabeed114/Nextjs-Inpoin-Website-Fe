@@ -34,7 +34,7 @@ class _JoinUsView extends Component{
                                 <JoinUsTitle>Join<JoinUsSubtitle>Us</JoinUsSubtitle></JoinUsTitle>
                             </JoinUsTitleGroup>
                             <Description>
-                                For any inquiries and needs please fill the form <br />and contact us.
+                                For any inquiries and needs<br/> please fill the form and contact us.
                             </Description>
                         </JoinUs>
                     </Side>
