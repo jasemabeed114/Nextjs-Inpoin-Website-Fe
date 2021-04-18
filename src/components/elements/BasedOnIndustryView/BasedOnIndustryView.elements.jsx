@@ -16,6 +16,9 @@ export const BasedOnIndustry = styled.div`
 `;
 
 export const BasedOnIndustryGroup = styled.div`
+@media screen and ${device.tabletL} and (min-width: 426px){
+  max-width: 426px;
+  }
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,7 +30,7 @@ export const BasedOnIndustryGroup = styled.div`
 
 export const BasedOnIndustryTitle = styled.div`
   @media(max-width: 768px) {   
-    // flex-direction: row;
+    flex-direction: column;
   }
   display: flex;
   flex-direction: column;
@@ -66,9 +69,6 @@ export const TitleIcon = styled.img`
   max-width: 100%;
   height: auto;
   filter: drop-shadow(-2px 4px 10px rgba(0, 0, 0, 0.25));
-@media screen and ${device.tabletL} and (min-width: 426px){
-  max-width: 100%;
-}
 `;
 
 export const Description = styled.p`
@@ -92,11 +92,11 @@ export const MobileDescription = styled.p`
 `;
 
 export const Visual = styled.img`
-  max-width: 80%;
+  max-width: 60%;
   height: auto;
   align-self: center;
 @media screen and ${device.tabletL} and (min-width: 426px){
-  max-width: 60%;
+  max-width: 30%;
 }
 `;
 

@@ -1,5 +1,5 @@
 //
-// last updated: 13/04/2021
+// last updated: 16/04/2021
 // @author: mahenza
 import styled from "styled-components";
 import device from "../../utils/device"
@@ -16,9 +16,9 @@ export const Row = styled.div`
 `;
 
 export const Side = styled.div`
-  flex: 35%;
+  flex: 30%;
   padding: 20px;
-  
+  align-self: flex-start;
 @media only screen and ${device.tabletL}{
   flex: 40%;
   padding-bottom: 12%;
@@ -27,11 +27,12 @@ export const Side = styled.div`
 `;
 
 export const Main = styled.div`
-  flex: 65%;
-  
+  flex: 70%;
+  align-self: flex-start;
+  height: 100%;
 @media only screen and ${device.tabletL}{
   flex: 60%;
-  padding-top: 8%;
+  align-self: center;
   padding-left: 2%;
 }
 `;
@@ -101,7 +102,17 @@ export const DashboardFrame = styled.iframe`
 
 export const ExperienceDashboardTitle = styled.div`
   display: flex;
-  align-items: left;
+@media screen and ${device.tabletL} and (min-width: 426px){
+  display: none;
+}
+`;
+
+export const MobileExperienceDashboardTitle = styled.div`
+  display: none;
+@media screen and ${device.tabletL} and (min-width: 426px){
+  display: block;
+  align-self: flex-end;
+}
 `;
 
 export const ExperienceDashboardList = styled.ul`
@@ -141,9 +152,7 @@ export const DashboardNarrativeTitle = styled.h4`
   font-style: normal;
   text-transform: capitalize;
   text-align: left;
-@media screen and ${device.tabletL} and (min-width: 426px){
-  font-size: 12px;
-  padding: 5px;
+  line-height: 150%;
   &::before {
     content: "•";
     color: red;
@@ -151,6 +160,9 @@ export const DashboardNarrativeTitle = styled.h4`
     width: 1em;
     margin-left: -1em;
   }
+@media screen and ${device.tabletL} and (min-width: 426px){
+  font-size: 12px;
+  padding: 5px;
 }
 `;
 
@@ -163,7 +175,7 @@ export const VideoFrame = styled.img`
   height: 85%;
   padding-top: 15%;
   display: none;
-@media only screen and (max-width: 725px) {
+@media only screen and (max-width: 812px) {
   display: block;
 }
 `;
