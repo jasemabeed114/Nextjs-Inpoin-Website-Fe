@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import device from "../../utils/device"
 
 export const ContentWrapper = styled.div`
   max-width: 100vw;
@@ -36,8 +37,8 @@ export const BasedOnIndustryTitle = styled.div`
 `;
 
 export const BasedOnIndustryBlackTitle = styled.h2`
-  @media(max-width: 768px) {   
-    font-size: 28px;
+  @media screen and ${device.tabletL} and (min-width: 426px){
+  font-size: 28px;
   }
   font-family: "Work Sans", sans-serif;
   font-size: 60px;
@@ -48,6 +49,9 @@ export const BasedOnIndustryBlackTitle = styled.h2`
 `;
 
 export const BasedOnIndustryWhiteTitle = styled.h2`
+  @media screen and ${device.tabletL} and (min-width: 426px){
+    font-size: 50px;
+  }
   font-family: "AlphaMack AOE";
   color: white;
   font-size: 90px;
@@ -58,60 +62,46 @@ export const BasedOnIndustryWhiteTitle = styled.h2`
   line-height: 0.7;
 `;
 
-export const Icons = styled.div`
-    padding: 24px;
-`;
-
-export const IconsTitle = styled.div`
-    width: 659px;
-    height: 140px;
-    left: 1010px;
-    top: 310px;
-    font-family: Work Sans;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 48px;
-    line-height: 36px;
-    display: flex;
-    align-items: center;
-    text-transform: uppercase;
-    color: #FFFFFF;
+export const TitleIcon = styled.img`
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(-2px 4px 10px rgba(0, 0, 0, 0.25));
+@media screen and ${device.tabletL} and (min-width: 426px){
+  max-width: 100%;
+}
 `;
 
 export const Description = styled.p`
-  @media(max-width: 768px) {   
-    font-size: 16px;
-    line-height: 150%;
-  }
   font-size: 20px;
   text-align: justify !important;
   line-height: 150%;
+  padding-right: 5%;
+@media screen and ${device.tabletL} and (min-width: 426px){
+  display: none;
+}
 `;
 
-export const DescriptionTitle = styled.p`
-  @media(max-width: 768px) {   
-    font-size: 24px;
-  }
-  margin-bottom: 24px;
-  width: 100%;
-  font-size: 32px;
-  font-weight: 700;
-  color: white;
-  padding: 12px;
-  background: linear-gradient(90deg, #F03134 6.81%, #E9A288 100%);
+export const MobileDescription = styled.p`
+  display: none;
+@media screen and ${device.tabletL} and (min-width: 426px){
+  font-size: 12px;
+  text-align: justify !important;
+  line-height: 150%;
+  display: block;
+}
 `;
 
 export const Visual = styled.img`
-  @media(max-width: 768px) {
-    align-self: center;
-    height: 128px;
-    width: 128px;
-  }
-  width: 100%;
+  max-width: 80%;
   height: auto;
-  align-items: left;
+  align-self: center;
+@media screen and ${device.tabletL} and (min-width: 426px){
+  max-width: 60%;
+}
 `;
 
 export const Slider = styled.div`
-
+  maxWidth: 1300px; 
+  width: 100vw; 
+  padding-left: 5%;
 `;
