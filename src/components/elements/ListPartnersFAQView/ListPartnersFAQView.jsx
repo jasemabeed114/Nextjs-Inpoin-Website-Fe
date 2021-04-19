@@ -244,7 +244,7 @@ class ListPartnersFAQView extends Component{
             </SectionPartner>
           </SectionWrapper>
           <SectionWrapper>
-            <div style={{ flex: 1, alignSelf: 'center' }}>
+            <div style={{ flex: 1, alignSelf: 'left' }}>
               <ListPartnerFAQBlackTitle>
                 FAQ
               </ListPartnerFAQBlackTitle>

@@ -10,7 +10,7 @@ export const ContentWrapper = styled.div`
 
 export const BasedOnIndustry = styled.div`
   @media(max-width: 768px) {   
-    flex-direction: column;
+    flex-direction: row;
   }
   display: flex;
 `;
@@ -96,7 +96,7 @@ export const Visual = styled.img`
   height: auto;
   align-self: center;
 @media screen and ${device.tabletL} and (min-width: 426px){
-  max-width: 30%;
+  max-width: 60%;
 }
 `;
 
