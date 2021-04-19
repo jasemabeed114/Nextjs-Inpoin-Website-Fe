@@ -2,13 +2,14 @@
 // last updated: 16/04/2021
 // @author: mahenza
 import React, { Component } from 'react';
-import { FaMobile } from "react-icons/fa"
+import { FaMobile, FaHome } from "react-icons/fa"
 
 import Link from 'next/link';
 import { Button, Grid } from '@material-ui/core/';
 
 import {
   Navbar,
+  Topbar,
   _TourWelcomeDialog,
   _AboutInpoinView,
   _OurServicesView,
@@ -69,40 +70,52 @@ class MF_Home extends Component {
   render() {
     return (
       <div>
-        <div className="topbar"> 
-          <img src="http://in-poin.mahenza.com/wp-content/uploads/2021/02/inpoin_logo_svg.png"></img>
-          <Navbar />
-        </div>
+        <Topbar />
         <div className="tilt-me-display">
-          <img src="http://in-poin.mahenza.com/wp-content/uploads/2021/02/inpoin_logo_svg.png"></img>
+          <img src="http://in-poin.mahenza.com/wp-content/uploads/2021/02/inpoin_logo_svg.png"/>
           <h2 className="tilt-me-subheader">Feel The Gamification Experience</h2>
-          <FaMobile className="fa" style={{ fontSize: 60 }} />
-          <h3 className="tilt-me-header"> Rotate your device (90 &deg;)</h3>
-          
+          <FaMobile className="fa-rotate" style={{ fontSize: 60, width: '100%'}} />
+          <h3 className="tilt-me-header"> 
+            Rotate your device (90 &deg;)
+          </h3>
         </div>
         <div className="outer-container scrollmenu">
           <div className="container-home draggable">
-            <section>
+            <section id="home-1">
               <_AboutInpoinView />
             </section>
-            <section>
+            <section id="home-2">
               <_OurServicesView/>
             </section>
-            <section>
+            <section id="home-3">
               <_ExperienceDashboardView/>
             </section>
-            <section>
+            <section id="home-4">
               <_BasedOnIndustryView/>
             </section>
-            <section>
+            <section id="home-5">
               <_ListPartnersFAQView/>
             </section>
-            <section>
+            <section id="home-6">
               <_JoinUsView/>  
             </section>
           </div>
         </div>
         {this._renderDialogStartGame()}
+        {/* <footer className="footer">
+          <FaMobile className="fa" style={{ fontSize: 30 }} />
+          <nav aria-label="Breadcrumb" class="breadcrumb">
+            <ul>
+                <li><a href="#home-1">About Inpoin</a></li>
+                <li><a href="#home-2">Our Services</a></li>
+                <li><a href="#home-3">Experience Dashboard</a></li>
+                <li><a href="#home-4">Based on Industry</a></li>
+                <li><a href="#home-5">List Partner FAQ</a></li>
+                <li><a href="#home-6">Join Us</a></li>
+                <li><span aria-current="page">Home</span></li>
+              </ul>
+          </nav>
+        </footer> */}
       </div>
     );
   }

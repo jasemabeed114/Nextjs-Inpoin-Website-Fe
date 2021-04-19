@@ -18,11 +18,12 @@ export const Row = styled.div`
 `;
 
 export const Side = styled.div`
-  flex: 50%;
+  flex: 60%;
   padding: 20px;
 @media only screen and ${device.tabletL}{
   flex: 30%;
   padding: 5px;
+  align-self: flex-end;
 }
 `;
 
@@ -41,12 +42,13 @@ export const Main = styled.div`
   align-self: flex-end;
 @media only screen and ${device.tabletL}{
   flex: 50%;
+  align-self: flex-end;
 }
 `;
 
 export const MyInpoinBlackTitle = styled.h2`
   font-family: "Work Sans", sans-serif;
-  font-size: 64px;
+  font-size: 40px;
   font-weight: bold;
   color: #303030;
   text-transform: uppercase;
@@ -72,7 +74,7 @@ export const MyInpoinRedSubTitle = styled.span`
 export const MyInpoinText = styled.p`
     font-size: 20px;
     text-align: left;
-    padding: 5% 0 5%;
+    padding: 15px 0 15px;
     line-height: 150%;
 @media screen and ${device.tabletL} and (min-width: 426px){
   font-size: 12px;

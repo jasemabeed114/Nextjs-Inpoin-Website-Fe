@@ -42,13 +42,13 @@ class _MyInpoinPage extends Component {
                             <Item>
                                 You can track all of your points in another merchant
                             </Item>
-                            <br></br>
+                            
                             <ExchangeIcon/>
                             <IconTitle>Exchange</IconTitle>
                             <Item>
                                 Exchange your points to another merchant only in one click                           
                             </Item>
-                            <br></br>
+                            
                             <RedeemIcon/>
                             <IconTitle>Redeem</IconTitle>
                             <Item>
@@ -61,13 +61,13 @@ class _MyInpoinPage extends Component {
                             <Item>
                                 You can track all of your points in another merchant
                             </Item>
-                            <br></br>
+                            
                             <MobileExchangeIcon />
                             <IconTitle>Exchange</IconTitle>
                             <Item>
                                 Exchange your points to another merchant only in one click
                             </Item>
-                            <br></br>
+                            
                             <MobileRedeemIcon />
                             <IconTitle>Redeem</IconTitle>
                             <Item>

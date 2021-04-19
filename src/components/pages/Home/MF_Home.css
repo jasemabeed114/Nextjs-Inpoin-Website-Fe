@@ -36,28 +36,7 @@ Drag functionality build 2021-03-23
 /*
 Menubar build 2021-03-23
 */
-.topbar {
-  position: relative;
-  width: 100%;
-  z-index: 1;
-  margin-top: 0;
-  background: transparent;
-  background-size: 100% 100%;
-  background-color: transparent;
-  background-repeat: no-repeat;
-}
 
-.topbar img {
-  position: absolute;
-  top: 20px;
-  left: 107px;
-}
-
-.topbar nav {
-  position: absolute;
-  top: 20px;
-  right: 107px;
-}
 
 .outer-container {
   width: 100vh;
@@ -131,13 +110,15 @@ Menubar build 2021-03-23
   .tilt-me-display{
     padding-top: 5%;
     display: -ms-grid;
+    align-items: center;
   }
   .tilt-me-header{
     font-family: "Work Sans", sans-serif;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
     color: #303030;
     text-transform: uppercase;
+    text-align: center;
   }
   .tilt-me-subheader{
     font-family: "AlphaMack AOE";
@@ -158,11 +139,11 @@ Menubar build 2021-03-23
 
 /* moving icons*/
 @media screen and (min-width: 426px), (orientation: portrait){
-  .fa {
+  .fa-rotate {
     font-size: 10em;
     animation: rotateLandscape 2s steps(5, end) 0s infinite;
-    margin-bottom: 25px;
     transform: none;
+    align-items: center;
   }
 
   @keyframes rotateLandscape {
@@ -177,6 +158,32 @@ Menubar build 2021-03-23
     }
   }
 }
+
+.footer {
+  position: absolute;
+  width: 100%;
+  flex-shrink: 0;
+  background: #ee2e31;
+  z-index: 999;
+  display: flex;
+  bottom: 0;
+  height: 10vh;
+}
+
+.breadcrumb ul {
+    display: flex;
+    padding: 10px;
+}
+    
+.breadcrumb li::before {
+    content: "→";
+    padding: 5px;
+}
+    
+.breadcrumb li:first-child::before {
+    content: "";
+}
+    
 
 .mr-8px {
   margin-right: 8px;
