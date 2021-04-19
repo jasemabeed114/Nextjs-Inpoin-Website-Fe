@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import {
-    Navbar,
+    Topbar,
     ContactUsView,
 } from "../../index";
 
@@ -9,10 +9,7 @@ class ContactUs extends Component {
     render() {
         return (
             <>
-                <div className="topbar">
-                    <img src="http://in-poin.mahenza.com/wp-content/uploads/2021/02/inpoin_logo_svg.png"></img>
-                    <Navbar />
-                </div>
+                <Topbar />
                 <div className="tilt-me-display">
                     <img src="http://in-poin.mahenza.com/wp-content/uploads/2021/02/inpoin_logo_svg.png"></img>
                     <h2 className="tilt-me-subheader">Feel The Experience</h2>

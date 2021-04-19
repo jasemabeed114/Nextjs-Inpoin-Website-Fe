@@ -6,7 +6,7 @@
 // export { default as JoinUsForm } from "./JoinUsForm/JoinUsForm";
 // export { default as SignUpForm } from "./SignUpForm/SignUpForm";
 export { default as Navbar } from "./elements/Navbar/Navbar";
-
+export { default as Topbar } from "./elements/Topbar/Topbar";
 
 //MF_Home page views
 // 

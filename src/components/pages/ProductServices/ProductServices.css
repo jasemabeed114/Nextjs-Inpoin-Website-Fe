@@ -30,31 +30,6 @@ Drag functionality build 2021-03-23
   cursor: grabbing;
 }
 
-/*
-Menubar build 2021-03-23
-*/
-.topbar {
-  position: relative;
-  width: 100%;
-  z-index: 1;
-  margin-top: 0;
-  background: transparent;
-  background-size: 100% 100%;
-  background-color: transparent;
-  background-repeat: no-repeat;
-}
-.topbar img {
-  position: absolute;
-  top: 20px;
-  left: 107px;
-}
-
-.topbar nav {
-  position: absolute;
-  top: 20px;
-  right: 107px;
-}
-
 .outer-container {
   width: 100vh;
   height: 100vw;
