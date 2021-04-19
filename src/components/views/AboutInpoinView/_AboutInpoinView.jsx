@@ -13,6 +13,7 @@ import {
     AboutInpoinTitle,
     AboutInpoinSubtitle,
     Description,
+    MobileDescription,
     Visual,
 } from "./_AboutInpoinView.elements";
 
@@ -28,10 +29,15 @@ class _AboutInpoinView extends Component {
                             </AboutTitleGroup>
                         </AboutInpoin>
                         <Description>
+                            Inpoin is a platform that help to boost your customer engagement,
+                            experience, and rewards to build loyalty through gamification
+                            approaches.
+                        </Description>
+                        <MobileDescription>
                             Inpoin is a platform that help to boost your <br />costumer engagement,
                             experience, and rewards<br /> to build loyalty through gamification
                             approaches.
-                        </Description>
+                        </MobileDescription>
                     </Side>
                     <Main>
                         <Visual src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/A1-AboutInpoin.png" />

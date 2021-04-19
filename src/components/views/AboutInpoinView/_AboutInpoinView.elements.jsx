@@ -79,13 +79,25 @@ export const Visual = styled.img`
 
 export const Description = styled.p`
   font-family: "Work Sans", sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   padding-top: 20px;
-  text-align: justify !important;
+  inline-size: auto;
+  writing-mode: horizontal-tb;
+  color:#000000DE;
   line-height: 150%;
 @media screen and ${device.tabletL} and (min-width: 426px){
+  display: none;
+}
+`;
+
+export const MobileDescription = styled.p`
+  display: none;
+@media screen and ${device.tabletL} and (min-width: 426px){
+  font-family: "Work Sans", sans-serif;
+  display: block;
   font-size: 12px;
   width: 250px;
+  padding-top: 20px;
 }
 `;
 
