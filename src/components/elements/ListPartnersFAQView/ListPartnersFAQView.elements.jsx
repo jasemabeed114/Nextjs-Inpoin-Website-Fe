@@ -28,7 +28,8 @@ export const ListPartnerFAQGroup = styled.div`
 
 export const ListPartnerFAQTitle = styled.div`
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  align-items: flex-end;
 @media screen and ${device.tabletL} and (min-width: 426px) {
     font-size: 50px;
   }

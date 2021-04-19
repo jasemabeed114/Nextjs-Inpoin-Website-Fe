@@ -19,9 +19,6 @@ export const Row = styled.div`
 
 export const Side = styled.div`
   flex: 50%;
-  padding: 20px;
-  align-self: center;
-  
 @media only screen and ${device.tabletL}{
   flex: 50%;
   padding: 5px;
@@ -44,13 +41,13 @@ export const Services = styled.div`
 
 export const OurServicesTitle = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 `;
 
 export const OurServiceGroup = styled.div`
   display: flex;
+  margin-top: -15px;
 `;
-
 
 export const OurServicesBlackTitle = styled.h2`
   font-family: "Work Sans", sans-serif;
@@ -79,7 +76,7 @@ export const OurServicesRedTitle = styled.span`
 
 export const ServiceDescription = styled.li`
   font-family: "Work Sans", sans-serif;
-  color: black;
+  color: color: #000000DE;
   margin: 10px 40px;
   &::before {
     content: "•";
@@ -97,18 +94,31 @@ export const ServiceList = styled.ul`
   display: flex;
   flex-direction: column;
   list-style: none;
-  font-size: 16px;
-  text-align: justify !important;
+  font-size: 20px;
+  text-align: left !important;
+  padding: 20px;
   line-height: 150%;
 @media screen and ${device.tabletL} and (min-width: 426px){
+  display: none;
+}
+`;
+
+export const MobileServiceList = styled.ul`
+  display: none;
+@media screen and ${device.tabletL} and (min-width: 426px){
+  display: block;
   font-size: 10px;
+  list-style: none;
+  font-size: 12px;
   padding-top: 10px;
+  line-height: 150%;
 }
 `;
 
 export const IconGroup = styled.div`
   display: flex;
   flex-direction: column;
+  align-self: flex-start;
 @media screen and ${device.tabletL} and (min-width: 426px){
   display: none;
 }
@@ -129,7 +139,7 @@ export const Icons = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding-top: 30px;
+  padding-top: 25px;
 @media screen and ${device.tabletL} and (min-width: 426px){
   padding-top: 10px;
 }
@@ -346,7 +356,7 @@ export const MobileIntegrationIcon = () => (
 
 export const IconsTitle = styled.span`
   font-family: "AlphaMack AOE";
-  color: black;
+  color: #000000DE;
   font-size: 40px;
   font-weight: normal;
   font-style: normal;

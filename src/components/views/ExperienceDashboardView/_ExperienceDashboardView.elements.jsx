@@ -50,8 +50,7 @@ export const ExperienceDashboard = styled.div`
 
 export const ExperienceDashboardGroup = styled.div`
   display: flex;
-  // align-items: center;
-  // text-align: left;
+  margin-top: 15px;
 `;
 
 export const ExperienceDashboardBlackTitle = styled.h2`
@@ -145,7 +144,7 @@ export const ExperienceDashboardDescription = styled.li`
 
 export const DashboardNarrativeTitle = styled.h4`
   font-family: "Work Sans", sans-serif;
-  color: #303030;
+  color: #000000DE;
   font-size: 20px;
   font-weight: bold;
   font-weight: normal;

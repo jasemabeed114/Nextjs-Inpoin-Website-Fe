@@ -7,6 +7,7 @@ import {
     Logo,
     LogoWrapper,
     ListPartnerFAQ,
+    ListPartnerFAQTitle,
     ListPartnerFAQBlackTitle,
     ListPartnerFAQRedTitle,
     ListPartnerFAQGroup,
@@ -152,14 +153,14 @@ class ListPartnersFAQView extends Component{
         <ListPartnerFAQ>
           <SectionWrapper>
             <SectionPartner>
-              <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+              <ListPartnerFAQTitle>
                 <ListPartnerFAQBlackTitle>
                   Project
                 </ListPartnerFAQBlackTitle>
                 <ListPartnerFAQRedTitle>
                   Portfolio
                 </ListPartnerFAQRedTitle>
-              </div>
+              </ListPartnerFAQTitle>
               <Description>
                 Fulfilling their business objectives and increase their costumer loyalty, Inpoin has the previlege of working with some of the most costumer centric companies
               </Description>
