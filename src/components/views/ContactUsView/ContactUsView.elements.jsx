@@ -1,7 +1,9 @@
+//
+// last updated: 19/04/2021
+// @author: mahenza
 import React from 'react';
 import styled from "styled-components";
 import device from "../../utils/device"
-import Icon from "./Icon"
 
 export const ContentWrapper = styled.div`
   width: 100%;
@@ -14,29 +16,30 @@ export const Row = styled.div`
 `;
 
 export const Side = styled.div`
-  flex: 60%;
-  align-self: center;
-  padding: 20px;
 @media only screen and ${device.tabletL}{
   flex: 60%;
-  padding: 5px;
 }
+  flex: 60%;
+  align-self: center;
+  margin-bottom: 50px;
 `;
 
 export const Main = styled.div`
-  flex: 40%;
 @media only screen and ${device.tabletL}{
   flex: 40%;
 }
+  flex: 40%;
+  align-self: center;
+  margin-bottom: 50px;
 `;
 
 export const ContactUs = styled.div`
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: auto;
 @media only screen and ${device.tabletL} {
   padding-top: 20%;
 }
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: auto;
 `;
 
 export const ContactUsGroup = styled.div`
@@ -45,10 +48,13 @@ export const ContactUsGroup = styled.div`
   align-items: left;
   width: 100%;
   position: relative;
-@media only screen and (max-width: 950px) {}
 `;
 
 export const ContactUsTitle = styled.h2`
+@media only screen and ${device.tabletL} {
+  font-size: 30px;
+  padding-top: 20px;
+}
   font-family: "Work Sans", sans-serif;
   font-size: 60px;
   font-weight: bold;
@@ -56,16 +62,15 @@ export const ContactUsTitle = styled.h2`
   text-align: left;
   text-transform: uppercase;
   line-height: 100%;
-@media only screen and ${device.tabletL} {
-  font-size: 30px;
-  padding-top: 20px;
-}
 `;
 
 export const ContactUsSubtitle = styled.span`
+@media screen and ${device.tabletL} and (min-width: 426px){
+  font-size: 90px;
+}
   font-family: "AlphaMack AOE";
   color: #ee2e31;
-  font-size: 90px;
+  font-size: 160px;
   font-weight: normal;
   font-style: normal;
   text-transform: capitalize;
@@ -73,15 +78,17 @@ export const ContactUsSubtitle = styled.span`
 `;
 
 export const Visual = styled.img`
+@media screen and ${device.tabletL} and (min-width: 426px){
+  max-width: 100%;
+  margin-left: -20%;
+  margin-bottom: 10%;
+}
   max-width: 100%;
   height: auto;
   display: flex;
+  align-self: flex-end;
   align-items: left;
   margin-left: -20%;
-@media only screen and ${device.tabletL} {
-  max-width: 100%;
-  margin-left: -20%;
-}
 `;
 
 export const TableContactUs = styled.table`
@@ -95,7 +102,6 @@ export const TableContactUs = styled.table`
 }
 `;
 export const MobileTableContactUs = styled.table`
-  display: none;
 @media only screen and ${device.tabletL} {
    padding-top: 10px;
 }
@@ -103,46 +109,45 @@ export const MobileTableContactUs = styled.table`
 @media screen and ${device.tabletL} and (min-width: 426px){
   display: block;
 }
+
+display: none;
 `;
 
 export const TableTitle = styled.h3`
+@media screen and ${device.tabletL} and (min-width: 426px){
+  font-size: 12px;
+  // padding: 5px;
+}
   font-family: "Work Sans", sans-serif;
   font-size: 30px;
   font-weight: bold;
   color: #303030;
   text-transform: capitalize;
   text-align: left;
-  padding: 15px;
-
-@media screen and ${device.tabletL} and (min-width: 426px){
-  font-size: 16px;
-  padding: 5px;
-}
 `;
 
 export const TableDetail = styled.ul`
-  font-family: "Work Sans", sans-serif;
-  font-weight: 10px;
-  color: #303030;
-  text-align: justify;
-  padding: 15px;
 @media only screen and ${device.tabletL}{
   font-weight: 5px;
   padding: 2px;
 }
 @media screen and ${device.tabletL} and (min-width: 426px){
-  font-size: 12px;
+  font-size: 10px;
 }
+  font-family: "Work Sans", sans-serif;
+  font-weight: 12px;
+  color: #303030;
+  text-align: justify;
 `;
 
 export const TableIcon = styled.div`
   display: flex;
   align-self: flex-start;
-
+  margin-top: -5px;
 ul li {  
   display: inline-block;
   font-size: 20px;
-  padding: 10px;
+  padding: 5px;
   }
 
 @media screen and ${device.tabletL} and (min-width: 426px){
@@ -150,11 +155,6 @@ ul li {
   padding: 5px;
   }
 }
-`;
-
-const Svg = styled(Icon)` 
-  width: 50px; 
-  height: 50px;
 `;
 
 export const AddressIcon = () => (

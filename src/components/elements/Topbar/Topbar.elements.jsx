@@ -31,3 +31,7 @@ export const Container = styled.div`
 }
 }
 `;
+
+export const TopbarLogo = styled.img`
+  width: 120px;
+`;

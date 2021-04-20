@@ -53,10 +53,6 @@ Drag functionality build 2021-03-23
   transform-origin: top left;
 }
 .container-contact-us section {
-/*testing container --*/  
-  /* border: 1px dashed blue;
-  box-sizing: border-box; */
-/*--eof testing container --*/ 
   min-width: 100%;
   display: flex;
   justify-content: center;
@@ -79,10 +75,10 @@ Drag functionality build 2021-03-23
 
 @media (max-width: 991px) {
   div.scrollmenu {
-  background-color: white;
-  overflow: auto;
-  white-space: nowrap;
-}
+    background-color: white;
+    overflow: auto;
+    white-space: nowrap;
+  }
 
   div.scrollmenu a {
     display: inline-block;
@@ -98,10 +94,19 @@ Drag functionality build 2021-03-23
 }
 
 @media only screen and (max-width: 425px) {
+  .topbar{
+  display: none;
+  }
+
+  .outer-container {
+    display: none;
+  }
+
   .tilt-me-display{
     padding-top: 5%;
     display: -ms-grid;
   }
+
   .tilt-me-header{
     padding-top: 15%;
     font-family: "Work Sans", sans-serif;
@@ -110,6 +115,7 @@ Drag functionality build 2021-03-23
     color: #303030;
     text-transform: uppercase;
   }
+
   .tilt-me-subheader{
     font-family: "AlphaMack AOE";
     color: #ee2e31;
@@ -118,13 +124,5 @@ Drag functionality build 2021-03-23
     font-style: normal;
     text-transform: capitalize;
     text-align: center;
-  }
-
-  .topbar{
-  display: none;
-  }
-
-  .outer-container {
-  display: none;
   }
 }

@@ -1,7 +1,10 @@
 import React, { Component } from "react";
+import { FaMobile } from "react-icons/fa"
+
 
 import {
-    Container
+    Container,
+    TopbarLogo
 } from "./Topbar.elements";
 
 import {
@@ -13,7 +16,7 @@ class Topbar extends Component {
         return (
             <>
                 <Container>
-                    <img src="http://in-poin.mahenza.com/wp-content/uploads/2021/02/inpoin_logo_svg.png"></img>
+                    <TopbarLogo src="http://in-poin.mahenza.com/wp-content/uploads/2021/02/inpoin_logo_svg.png"/>
                     <Navbar />
                 </Container>
             </>
