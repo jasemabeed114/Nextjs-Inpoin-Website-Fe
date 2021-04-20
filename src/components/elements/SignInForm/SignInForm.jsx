@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { nanoid } from 'nanoid';
+import Link from 'next/link';
 import {
   Container,
   Form,
@@ -85,6 +86,7 @@ function SignUpForm({ onSuccess, onFailed }) {
         </DataGroup>
         {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
         <SubmitButton onClick={handleSubmit}>Sign In</SubmitButton>
+        <p>Don't have an account?, <Link href="/register">Register</Link> </p>
       </Form>
     </Container>
   );

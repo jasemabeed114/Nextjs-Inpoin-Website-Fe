@@ -69,7 +69,7 @@ export const SubmitButton = styled.button`
   border-radius: 10px;
   border: none;
   height: 30px;
-  margin: 40px 0 10px 0;
+  margin: 0 0 10px 0;
   outline: none;
   background: #EE2D30;
 &:active {

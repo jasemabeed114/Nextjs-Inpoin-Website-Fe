@@ -1,5 +1,6 @@
 /*
-Navbar build 2021-03-21
+/ last updated: 16/04/2021
+/ @author: mahenza
 */
 
 .topbar {
@@ -49,256 +50,71 @@ Navbar build 2021-03-21
   height: 100vh;
   background: linear-gradient(95.65deg, #f1f2f7 -19.48%, #d9bbbe 100%);
 }
-.container section .content {
-  max-width: auto;
-  padding: 40px;
-  text-align: center;
-}
 
-/* VARIABLES
-   =================================================================== */
-:root {
-  --font-size-xs: .75rem;
-  --font-size-s: .875rem;
-  --font-size-m: 1rem;
-
-  --color-brand-white: #FFFFFF;
-  --color-brand-red: #ED2B2E;
-  --color-brand-red-dark: #a23;
-
-  --color-gray-0: #f8f9fa;
-  --color-gray-2: #e9ecef;
-  --color-gray-4: #ced4da;
-  --color-gray-5: #adb5bd;
-  --color-gray-7: #495057;
-  --color-gray-8: #343a40;
-  --color-gray-9: #212529;
-
-  --color-util-danger: #fa5252;
-
-  --border-radius-default: 8px;
-  --border-radius-s: 4px;
-
-  --transition-default: all ease-in-out 200ms;
-
-  --box-shadow-s: 0 12px 6px -12px rgba(0, 0, 0, .15);
-  --box-shadow-m: 0 16px 12px -12px rgba(0, 0, 0, .15);
-  --box-shadow-l: 0 16px 24px -12px rgba(0, 0, 0, .2);
-  --box-shadow-button: 0 12px 6px -12px rgba(235, 100, 45, 1);
-  --box-shadow-danger: 0 12px 6px -12px rgba(250, 82, 82, .5);
-}
-
-/* ANIMATIONS
-   =================================================================== */
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
+@media screen and (min-width: 1550px) and (min-width: 426px){
+  .tilt-me-display{
+    display: none;
   }
 }
 
-@keyframes fade-out {
-  from {
-    opacity: 1;
+@media (max-width: 991px) {
+  div.scrollmenu {
+    background-color: white;
+    overflow: auto;
+    white-space: nowrap;
   }
 
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes fade-in-up {
-  from {
-    transform: translateY(48px);
-    opacity: 0;
+  div.scrollmenu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
   }
 
-  to {
-    transform: translateY(0);
-    opacity: 1;
+  div.scrollmenu a:hover {
+    background-color: #777;
   }
 }
 
-@keyframes fade-out-down {
-  from {
-    transform: translateY(0);
-    opacity: 1;
-  }
-
-  to {
-    transform: translateY(48px);
-    opacity: 0;
+@media only screen  and (max-width: 950px) and (min-width: 425px){
+  .topbar img{
+    position :absolute;
+    top:20px;
+    left: 0; 
   }
 }
 
-@keyframes shake {
-  0%, to {
-    transform: translateZ(0)
+@media only screen and (max-width: 425px) and (orientation: portrait){
+  .topbar{
+  display: none;
   }
 
-  10%, 30%, 50%, 70%, 90% {
-    transform: translate3d(-10px, 0, 0)
+  .outer-container {
+    display: none;
   }
 
-  20%, 40%, 60%, 80% {
-    transform: translate3d(10px, 0, 0)
+  .tilt-me-display{
+    padding-top: 5%;
+    display: -ms-grid;
   }
-}
 
-/* LOGIN
-   =================================================================== */
-.c-login {
-  opacity: 0;
-  animation-name: fade-in-up;
-  animation-fill-mode: forwards;
-  animation-delay: 1500ms;
-}
+  .tilt-me-header{
+    padding-top: 15%;
+    font-family: "Work Sans", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #303030;
+    text-transform: uppercase;
+  }
 
-.c-login__container {
-  width: 320px;
-  max-width: 100%;
-  padding: 24px 24px 16px 24px;
-  border-radius: var(--border-radius-default);
-  background-color: white;
-  box-shadow: var(--box-shadow-l);
-}
-
-.c-login__container.has-error {
-  animation-name: shake;
-  animation-fill-mode: forwards;
-  animation-duration: 750ms;
-}
-
-/* LINKS
-   =================================================================== */
-.c-links {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 8px;
-}
-
-.c-links__item {
-  display: block;
-  padding: 4px 0;
-  font-size: var(--font-size-xs);
-  color: var(--color-gray-7);
-  text-decoration: none;
-}
-
-.c-links__item:hover,
-.c-links__item:focus,
-.c-links__item:active {
-  text-decoration: underline;
-}
-
-/* FORM
-   =================================================================== */
-.c-form {
-  display: grid;
-  grid-gap: 16px;
-}
-
-.f-field {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  width: 100%;
-  padding: 0;
-}
-
-.f-label {
-  position: absolute;
-  top: 50%; left: 0;
-  padding: 0 6px;
-  margin-left: 6px;
-  font-size: var(--font-size-s);
-  font-weight: 700;
-  transition: var(--transition-default);
-  transform: translateY(-50%);
-  background-color: white;
-  color: var(--color-gray-8);
-}
-
-.f-text {
-  width: 100%;
-  border: none;
-  margin: 0;
-  padding: 12px;
-  border: 1px solid var(--color-gray-2);
-  border-radius: var(--border-radius-s);
-  order: -1;
-  font-size: var(--font-size-m);
-  box-shadow: none;
-  transition: var(--transition-default);
-  background-color: transparent;
-  color: var(--color-gray-9);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
-
-.f-text:hover,
-.f-text:focus {
-  outline: none;
-  border-color: var(--color-gray-5);
-}
-
-.f-text:focus {
-  box-shadow: var(--box-shadow-s);
-}
-
-.f-text:focus + .f-label,
-.f-text.is-filled + .f-label {
-  font-size: var(--font-size-s);
-  top: 0;
-}
-
-.f-text.has-error {
-  border-color: var(--color-util-danger);
-}
-
-.f-submitted .c-background {
-  animation-name: fade-out;
-  animation-fill-mode: forwards;
-  animation-duration: 750ms;
-  animation-delay: 500ms;
-  opacity: 1;
-}
-
-.f-submitted .c-login {
-  animation-name: fade-out-down;
-  animation-fill-mode: forwards;
-  animation-duration: 750ms;
-  animation-delay: 0ms;
-  opacity: 1;
-}
-
-/* BUTTON
-   =================================================================== */
-.c-button {
-  font-size: var(--font-size-m);
-  font-weight: 700;
-  border: 1px solid transparent;
-  border-radius: var(--border-radius-s);
-  padding: 12px;
-  background-color: var(--color-brand-red);
-  color: white;
-  transition: var(--transition-default);
-  cursor: pointer;
-}
-
-.c-button:hover,
-.c-button:focus,
-.c-button:active {
-  background-color: var(--color-brand-red-dark);
-}
-
-.c-button:focus,
-.c-button:active {
-  box-shadow: var(--box-shadow-button);
-  outline: none;
+  .tilt-me-subheader{
+    font-family: "AlphaMack AOE";
+    color: #ee2e31;
+    font-size: 90px;
+    font-weight: normal;
+    font-style: normal;
+    text-transform: capitalize;
+    text-align: center;
+  }
 }

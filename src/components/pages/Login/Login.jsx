@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React, { Component } from 'react';
 import SignInForm from '../../elements/SignInForm/SignInForm';
 import OtpForm from '../../elements/OtpForm/OtpForm';
+import { FaMobile } from "react-icons/fa"
 
 class Login extends Component {
 
@@ -28,8 +29,16 @@ class Login extends Component {
       <>
         <div className="topbar">
           <Link href="/">
-            <img src="http://in-poin.mahenza.com/wp-content/uploads/2021/02/inpoin_logo_svg.png"></img>
+            <img src="http://in-poin.mahenza.com/wp-content/uploads/2021/02/inpoin_logo_svg.png"/>
           </Link>
+        </div>
+        <div className="tilt-me-display">
+          <img src="http://in-poin.mahenza.com/wp-content/uploads/2021/02/inpoin_logo_svg.png" />
+          <h2 className="tilt-me-subheader">Feel The Gamification Experience</h2>
+          <FaMobile className="fa-rotate" style={{ fontSize: 60, width: '100%' }} />
+          <h3 className="tilt-me-header">
+            Rotate your device (90 &deg;)
+          </h3>
         </div>
         <div className="outer-container">
           <div className="container">
