@@ -1,6 +1,14 @@
+//
+// last updated: 21/04/2021
+// - removing container background for mobile display
+// @author: mahenza
 import styled from "styled-components";
+import device from "../../utils/device"
 
 export const Container = styled.div`
+@media screen and ${device.tabletL} and (min-width: 426px) {
+    background-image: none;
+  }
   min-width: 100%;
   /* height: auto; */
   display: flex;
@@ -9,7 +17,7 @@ export const Container = styled.div`
   flex-direction: column;
   height: 100vh;
   padding: 20px 0;
-  background-image: url("http://in-poin.mahenza.com/wp-content/uploads/2021/03/A0.-Visual.png") !important;
+  background-image: url("http://in-poin.mahenza.com/wp-content/uploads/2021/03/A0.-Visual.png");
   background-size: 443px 641px;
   height: 800px; 
   background-position: 56% 50%;;
