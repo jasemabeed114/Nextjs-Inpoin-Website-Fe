@@ -1,7 +1,10 @@
+//
+// last updated: 21/04/2021
+// - adding new svg icon for mission  
+// @author: mahenza
 import React from 'react';
 import styled from "styled-components";
 import device from "../../utils/device";
-import Icon from "./Icon";
 
 export const ContentWrapper = styled.div`
   width: 100%;
@@ -34,7 +37,7 @@ export const Main = styled.div`
 export const GameMechanics = styled.div`
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 80%;
 `;
 
 export const GameMechanicsTitleGroup = styled.div`
@@ -115,7 +118,6 @@ export const ListItem = styled.div`
   color: #303030;
   margin-top: 60px;
   padding-bottom: 5px;
-  // background-color: purple;
 
 @media screen and ${device.tabletL} and (min-width: 426px){
   margin-top: 20px;
@@ -136,11 +138,6 @@ export const ListItem = styled.div`
     left: 0;
 }
 }
-`;
-
-const Svg = styled(Icon)` 
-  width: 50px; 
-  height: 50px;
 `;
 
 export const PointsIcon = () => (
