@@ -1,3 +1,7 @@
+//
+// last updated: 21/04/2021
+// - adding custom sizing for logo item
+// @author: mahenza
 import styled from "styled-components";
 import device from "../../utils/device"
 
@@ -15,39 +19,43 @@ export const ListPartnerFAQ = styled.div`
 `;
 
 export const ListPartnerFAQGroup = styled.div`
+@media screen and ${device.tabletL} and (min-width: 426px) {
+    display: none;
+  }
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   text-align: start;
   width: 100%;
   position: relative;
-@media screen and ${device.tabletL} and (min-width: 426px) {
-    display: none;
-  }
 `;
 
 export const ListPartnerFAQTitle = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
 @media screen and ${device.tabletL} and (min-width: 426px) {
     font-size: 50px;
   }
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
 `;
 
 export const ListPartnerFAQBlackTitle = styled.h2`
+@media screen and ${device.tabletL} and (min-width: 426px) {
+    font-size: 30px;
+  }
   font-family: "Work Sans", sans-serif;
   font-size: 60px;
   font-weight: bold;
   color: #303030;
   text-transform: uppercase;
   text-align: left;
-  @media screen and ${device.tabletL} and (min-width: 426px) {
-    font-size: 30px;
-  }
+  
 `;
 
 export const ListPartnerFAQRedTitle = styled.span`
+@media screen and ${device.tabletL} and (min-width: 426px) {
+    font-size: 50px;
+  }
   font-family: "AlphaMack AOE";
   color: #ee2e31;
   font-size: 90px;
@@ -55,12 +63,12 @@ export const ListPartnerFAQRedTitle = styled.span`
   font-style: normal;
   text-transform: capitalize;
   text-align: left;
-  @media screen and ${device.tabletL} and (min-width: 426px) {
-    font-size: 50px;
-  }
 `;
 
 export const Description = styled.p`
+ @media screen and ${device.tabletL} and (min-width: 426px) {
+    display: none;
+  }
   font-family: "Work Sans", sans-serif;
   font-size: 20px;
   text-align: justify;
@@ -68,18 +76,15 @@ export const Description = styled.p`
   writing-mode: horizontal-tb;
   line-height: 150%;
   padding-right: 15%;
-  @media screen and ${device.tabletL} and (min-width: 426px) {
-    display: none;
-  }
 `;
 
 export const MobileDescription = styled.p`
-  display: none;
-  @media screen and ${device.tabletL} and (min-width: 426px) {
+ @media screen and ${device.tabletL} and (min-width: 426px) {
     display: block;
     font-family: "Work Sans", sans-serif;
     font-size: 12px;
   }
+  display: none;
 `;
 
 export const Spacing = styled.div`
@@ -89,6 +94,10 @@ export const Spacing = styled.div`
 export const Slider = styled.div``;
 
 export const LogoWrapper = styled.div`
+@media screen and ${device.tabletL} and (min-width: 426px) {
+    width: 80px;
+    height: 45px;
+  }
   background-color: #FFFFFF;
   border-radius: 16px;
   width: 140px;
@@ -96,24 +105,30 @@ export const LogoWrapper = styled.div`
   padding: 5px;
   display: flex;
   align-items: center;
- @media screen and ${device.tabletL} and (min-width: 426px) {
-    width: 80px;
-    height: 45px;
-  }
 `;
 
 export const Logo = styled.img`
   width: 100%;
   //height: 54px;
+
+&.item-2{
+  width: 70%;
+  padding-left: 20px;
+}
+
+&.item-3{
+  width: 70%;
+  padding-left: 20px;
+}
 `;
 
 export const FAQWrapper = styled.div`
+@media screen and ${device.tabletL} and (min-width: 426px) {
+    display: none;
+  }
   width: auto;
   height: 35vh;
   overflow-y: auto;
- @media screen and ${device.tabletL} and (min-width: 426px) {
-    display: none;
-  }
 `;
 
 export const Accordion = styled.button`

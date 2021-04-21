@@ -175,68 +175,37 @@ class ListPartnersFAQView extends Component{
                 <Swiper breakpoints={sliderBreakpoints} hideBullet slidesPerView={'auto'} spaceBetween={10}>
                   <SwiperSlide>
                     <LogoWrapper>
-                      <Logo src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/8.-Visual-Logo-Project-Portofolio-1-MyPertamina.png"></Logo>
+                      <Logo className="item-1" src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/8.-Visual-Logo-Project-Portofolio-1-MyPertamina.png"/>
                     </LogoWrapper>
                   </SwiperSlide>
                   <SwiperSlide>
                     <LogoWrapper>
-                      <Logo src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/10.-Visual-Logo-Project-Portofolio-2-myIndiHome-Partner.png"></Logo>
+                      <Logo className="item-2" src="http://in-poin.mahenza.com/wp-content/uploads/2021/04/my_indihome.png"/>
                     </LogoWrapper>
                   </SwiperSlide>
                   <SwiperSlide>
                     <LogoWrapper>
-                      <Logo src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/10.-Visual-Logo-Project-Portofolio-3-QRen.png"></Logo>
+                      <Logo className="item-3" src="http://in-poin.mahenza.com/wp-content/uploads/2021/04/qren.png"/>
                     </LogoWrapper>
                   </SwiperSlide>
                   <SwiperSlide>
                     <LogoWrapper>
-                      <Logo src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/11.-Visual-Logo-Project-Portofolio-4-myIndiHome.png"></Logo>
+                      <Logo className="item-4" src="http://in-poin.mahenza.com/wp-content/uploads/2021/04/wonderin.png"/>
                     </LogoWrapper>
                   </SwiperSlide>
                   <SwiperSlide>
                     <LogoWrapper>
-                      <Logo src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/12.-Visual-Logo-Project-Portofolio-5-LinkAJA.png" />
+                      <Logo className="item-5" src="http://in-poin.mahenza.com/wp-content/uploads/2021/04/Screen-Shot-2021-04-21-at-09.58.28.png" />
                     </LogoWrapper>
                   </SwiperSlide>
                   <SwiperSlide>
                     <LogoWrapper>
-                      <Logo src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/13.-Visual-Logo-Project-Portofolio-6-myTDS.png"/>
+                      <Logo className="item-6" src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/17.-Visual-Logo-Project-Portofolio-10-MyDigibiz.png"/>
                     </LogoWrapper>
                   </SwiperSlide>
                   <SwiperSlide>
                     <LogoWrapper>
-                      <Logo src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/14.-Visual-Logo-Project-Portofolio-7-HKTI.png"/>
-                    </LogoWrapper>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <LogoWrapper>
-                      <Logo src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/15.-Visual-Logo-Project-Portofolio-8-Smart-Business.png" />
-                    </LogoWrapper>
-                  </SwiperSlide>
-
-                  <SwiperSlide>
-                    <LogoWrapper>
-                      <Logo src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/16.-Visual-Logo-Project-Portofolio-9-Jak-Lingko.png" />
-                    </LogoWrapper>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <LogoWrapper>
-                      <Logo src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/17.-Visual-Logo-Project-Portofolio-10-MyDigibiz.png" />
-                    </LogoWrapper>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <LogoWrapper>
-                      <Logo src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/18.-Visual-Logo-Project-Portofolio-11-alodokter.png" />
-                    </LogoWrapper>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <LogoWrapper>
-                      <Logo src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/19.-Visual-Logo-Project-Portofolio-12-Studext.png" />
-                    </LogoWrapper>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <LogoWrapper>
-                      <Logo src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/20.-Visual-Logo-Project-Portofolio-13-Bonum.png" />
+                      <Logo className="item-7" src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/10.-Visual-Logo-Project-Portofolio-2-myIndiHome-Partner.png"/>
                     </LogoWrapper>
                   </SwiperSlide>
                 </Swiper>
