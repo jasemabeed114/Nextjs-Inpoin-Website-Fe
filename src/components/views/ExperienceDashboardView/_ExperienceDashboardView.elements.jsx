@@ -161,7 +161,7 @@ export const DashboardNarrativeTitle = styled.h4`
   }
 @media screen and ${device.tabletL} and (min-width: 426px){
   font-size: 12px;
-  padding: 5px;
+  padding: 2px;
 }
 `;
 

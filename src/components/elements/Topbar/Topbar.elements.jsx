@@ -14,24 +14,25 @@ export const Container = styled.div`
     background-repeat: no-repeat;
 
 & nav{
+  @media screen and (orientation: portrait){
+  display: none;
+  }
     position: absolute;
     top: 20px;
     right: 40px;
-@media screen and (orientation: portrait){
-  display: none;
-  }
 }
 
 & img{
+  @media screen and ${device.tabletL} and (min-width: 426px){
+  width: 15%;
+  left: 25px;
+  }
+  @media screen and (orientation: portrait){
+    display: none;
+  }
     position: absolute;
+    width: 15%;
+    left: 5%;
     top: 20px;
-    left: 50px;
-@media screen and (orientation: portrait){
-  display: none;
 }
-}
-`;
-
-export const TopbarLogo = styled.img`
-  width: 120px;
 `;
