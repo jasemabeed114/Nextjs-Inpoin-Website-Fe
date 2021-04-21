@@ -31,6 +31,13 @@ class _MyInpoinPage extends Component {
         return (
             <ContentWrapper>
                 <Row>
+                   
+                    <p className="clip">UNDER DEVELOPMENT
+                    <MyInpoinBlackTitle>scroll down to preview next section</MyInpoinBlackTitle>
+                    </p>
+                </Row>
+                
+                {/* <Row>
                     <Side>
                         <MyInpoinBlackTitle>MANAGE YOUR REWARD <br/> POINTS WITH JUST
                         <MyInpoinRedSubTitle>One-Click Away!</MyInpoinRedSubTitle>
@@ -94,32 +101,7 @@ class _MyInpoinPage extends Component {
                     <Main>
                         <Visual src="https://inpoin.id/static/images/LandingPage/my_inpoin_app.png" alt="android-mobile-myinpoin"></Visual>
                     </Main>
-                </Row>
-
-
-                {/* <LeftColumn> </LeftColumn> */}
-                {/* <MiddleColumn>
-                    <DownloadButton href="https://play.google.com/store/apps/details?id=com.telkom.inpoinmobile" rel="noopener noreferrer nofollow" target="_blank">
-                        <table>
-                            <tr>
-                                <th>
-                                    <img className="my-inpoin" src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/myinpoin-logo.png"></img>
-                                </th>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <img className="google-play" alt="download myinpoin" src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/my_inpoin_app.png" />
-                                </td>
-                            </tr>
-                        </table>
-                    </DownloadButton>
-                </MiddleColumn>
-                <RightColumn>
-                    <Visual src="https://inpoin.id/static/images/LandingPage/my_inpoin_app.png" alt="android-mobile-myinpoin">
-                    </Visual>                 
-                </RightColumn> */}
-    
-        
+                </Row>  */}
             </ContentWrapper>
         );
     }

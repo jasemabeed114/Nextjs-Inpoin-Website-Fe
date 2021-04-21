@@ -1,20 +1,39 @@
 //
-// last updated: 13/04/2021
+// last updated: 21/04/2021
+// - commented out view sections, and adding clip txt css to display underconstruction 
 // @author: mahenza
 import React from 'react';
 import styled from "styled-components";
 import device from "../../utils/device";
-import Icon from "./Icon";
 
 export const ContentWrapper = styled.div`
   width: 100%;
   display: flex;
   padding-left: 5%;
+  background: white;
 `;
 
 export const Row = styled.div`
   display: flex;
   width: 100%;
+
+& p{ margin: 0px; }
+
+& .clip{
+  /*
+  Ensure background is added first
+  */
+  background: linear-gradient(to bottom, #eee, rgba(222,112,6,0.2), #ee2e31),url(http://in-poin.mahenza.com/wp-content/uploads/2021/04/bg-underconst-1.jpg);
+
+  //  background-attachment: fixed;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-family: "AlphaMack AOE";
+  font-size: 12vw;
+  font-weight: bold;
+  text-align: center;
+}
+
 `;
 
 export const Side = styled.div`
@@ -97,11 +116,6 @@ export const Visual = styled.img`
   height: auto;
     -webkit-user-select: none;
 `;
-
-// const Svg = styled(Icon)` 
-//   width: 50px; 
-//   height: 50px;
-// `;
 
 export const WalletIcon = () => (
   <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
