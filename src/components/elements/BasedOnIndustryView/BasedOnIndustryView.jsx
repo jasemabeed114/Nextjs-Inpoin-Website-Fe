@@ -41,10 +41,10 @@ class BasedOnIndustryView extends Component{
                 <BasedOnIndustryGroup>
                   <TitleIcon src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/label-howwework-1.png" />
                   <Description>
-                    In the Health Care industry, having credibility and quality of human resources can affect the ease of achieving business goals. With the Inpoin service, appreciation and support from the company in the form of rewards that can affect employee productivity levels will be easier to obtain. Not only increases productivity levels, this system can also increase customer loyalty with a membership program with all its benefits.
+                    In the Healthcare industry, having credibility and quality of human resources can affect the ease of achieving business goals. With the Inpoin service, appreciation and support from the company in the form of rewards that can affect employee productivity levels will be easier to obtain. Not only increases productivity levels, this system can also increase customer loyalty with a membership program with all its benefits.
                   </Description>
                   <MobileDescription>
-                    In the Health Care industry, having credibility <br />
+                    In the Healthcare industry, having credibility <br />
                     and quality of human resources can affect <br />
                     the ease of achieving business goals. With the Inpoin <br />
                     service, appreciation and support from the company <br />

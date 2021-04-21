@@ -6,6 +6,7 @@ export const ContentWrapper = styled.div`
   display: flex;
   padding-top: 5%;
   padding-left: 5%;
+  align-self: flex-end;
 `;
 
 export const Row = styled.div`

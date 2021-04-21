@@ -17,7 +17,6 @@ export const Row = styled.div`
 
 export const Side = styled.div`
   flex: 50%;
-  max-width: 600px;
   padding-left: 5%;
   align-self: center;
 @media only screen and ${device.tabletL}{
@@ -81,15 +80,13 @@ export const HowWeWorkRedTitle = styled.span`
 export const Label = styled.span`
   width: 341px;
   height: 67px;
-  font-size: 38px;
+  font-size: 36px;
   font-weight: bold;
   padding: 15px;
   margin-bottom: 5%;
   background: linear-gradient(180deg, #F02F32 0%, #FD5457 100%);
   text-transform: uppercase;
   color: white;
-  display: flex;
-  align-items: center;
 @media screen and ${device.tabletL} and (min-width: 426px){
   width: 170px;
   height: 33px;
@@ -111,4 +108,10 @@ export const Item = styled.p`
 export const Visual = styled.img`
   max-width: 100%;
   height: auto;
+`;
+
+export const Slider = styled.div`
+  maxWidth: 1300px; 
+  width: 100vw; 
+  padding-left: 5%;
 `;

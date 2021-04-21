@@ -16,7 +16,7 @@ function SwiperComponent({ children, hideBullet, ...swiperProps }) {
       type: 'bullets',
       clickable: true
     },
-    autoplay: { delay: 3000, disableOnInteraction: false },
+    autoplay: { delay: 10000, disableOnInteraction: false },
     ...swiperProps
   }
   return (
