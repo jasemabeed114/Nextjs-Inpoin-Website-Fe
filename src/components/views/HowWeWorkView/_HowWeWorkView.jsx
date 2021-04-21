@@ -32,10 +32,10 @@ class _HowWeWorkView extends Component {
                         <Label>How We Work</Label>
                         <HowWeWorkWhiteTitle>
                           Identify Business
-                        <HowWeWorkRedTitle>
-                            Objectives
-                        </HowWeWorkRedTitle>
                         </HowWeWorkWhiteTitle>
+                      <HowWeWorkRedTitle>
+                        Objectives
+                        </HowWeWorkRedTitle>
                         <Item>
                           A design has to be purposive & align with business objectives.<br />
                             What are the goals? <br />
@@ -45,7 +45,7 @@ class _HowWeWorkView extends Component {
                     </HowWeWork>
                   </Side>
                   <Main>
-                    <Visual src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/B-6-identify.png" />
+                  <Visual className="objectives" src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/B-6-identify.png" />
                   </Main>
               </Row>
             </SwiperSlide>
@@ -70,7 +70,7 @@ class _HowWeWorkView extends Component {
                     </HowWeWork>
                 </Side>
                 <Main>
-                    <Visual src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/B-6-target.png" />
+                  <Visual className="behaviours" src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/B-6-target.png" />
                 </Main> 
               </Row>
             </SwiperSlide>
@@ -95,7 +95,7 @@ class _HowWeWorkView extends Component {
                   </HowWeWork>
                 </Side>
                 <Main>
-                  <Visual src="http://in-poin.mahenza.com/wp-content/uploads/2021/04/B-6-Describe-The-Player.png"/>
+                  <Visual className="thePlayers" src="http://in-poin.mahenza.com/wp-content/uploads/2021/04/B-6-Describe-The-Player.png"/>
                 </Main> 
               </Row>
             </SwiperSlide>
@@ -121,7 +121,7 @@ class _HowWeWorkView extends Component {
                   </HowWeWork>
               </Side>
               <Main>
-                  <Visual src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/B-6-1.png"/>
+                  <Visual className="andApproval" src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/B-6-1.png"/>
               </Main>
               </Row>
             </SwiperSlide>
@@ -150,7 +150,7 @@ class _HowWeWorkView extends Component {
                   </HowWeWork>
                 </Side>
                 <Main>
-                  <Visual src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/B-6-integration.png" />
+                  <Visual className="andEvaluation" src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/B-6-integration.png" />
                 </Main>
               </Row>
             </SwiperSlide>
