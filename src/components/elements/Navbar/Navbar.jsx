@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {FaBars, FaTimes, FaHome, FaTicketAlt, FaUsers, FaPaperPlane} from "react-icons/fa"
+import { FaHome, FaTicketAlt, FaUsers, FaPaperPlane} from "react-icons/fa"
 import { IconContext } from "react-icons/lib"
 import Link from "next/link";
 import { useRouter } from 'next/router';
@@ -14,6 +14,10 @@ import {
     NavLinks,
 } from "./Navbar.elements";
 
+import {
+  FlyMenu,
+} from '../../index';
+
 function Navbar()  {     
   const [click, setClick] = useState(false)
   const handleClick = () => setClick(!click)
@@ -25,9 +29,9 @@ function Navbar()  {
     <IconContext.Provider value={{ color: "#fff"}}>  
       <Nav>                    
         <NavbarContainer>
-          {/* <MobileIcon onClick={handleClick} >
-              {click ? <FaTimes /> : <FaBars />}
-          </MobileIcon> */}
+          <MobileIcon >      
+            <FlyMenu />
+          </MobileIcon>
           <NavMenu onClick={handleClick} click={click}>
             <NavItem>
               <Link href="/" passHref>

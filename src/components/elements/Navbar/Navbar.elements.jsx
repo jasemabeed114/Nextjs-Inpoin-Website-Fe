@@ -1,6 +1,10 @@
+//
+// last updated: 21/04/2021
+// - adding nav for mobile display (active on click is not implemented yet)
+// @author: mahenza
 import styled from "styled-components";
-
 import { Container } from "../../utils/globalStyles"
+import device from "../../utils/device"
 
 export const Nav = styled.nav`
     background: transparent;
@@ -31,15 +35,10 @@ export const NavLogo = styled.img`
 export const MobileIcon = styled.div`
     display: none;
 
-@media screen and (max-width: 960px){
+@media screen and ${device.tabletL} and (min-width: 426px){
     color: #ef2e31;
     display: block;
-    postion: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100, 60%);
-    font-size: 1.8rem;
-    cursor: pointer;
+    margin-top: -50%;
 }
 `;
 
