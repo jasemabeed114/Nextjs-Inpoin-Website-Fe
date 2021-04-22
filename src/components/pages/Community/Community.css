@@ -1,0 +1,120 @@
+/*
+/ last updated: 16/04/2021
+/ @author: mahenza
+*/
+
+.topbar {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  margin-top: 0;
+	background:transparent;
+	background-size: 100% 100%;
+  background-color: transparent;
+	background-repeat: no-repeat;	
+}
+.topbar img{
+  position :absolute;
+  top:20px;
+  left: 107px; 
+}
+
+.outer-container {
+  width: 100vh;
+  height: 100vw;
+  transform: rotate(-90deg) translateX(-100vh);
+  transform-origin: top left;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: absolute;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.container-community {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  transform: rotate(90deg) translateY(-100vh);
+  transform-origin: top left;
+}
+.container-community section {
+  min-width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(95.65deg, #f1f2f7 -19.48%, #d9bbbe 100%);
+}
+
+@media screen and (min-width: 1550px) and (min-width: 426px){
+  .tilt-me-display{
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  div.scrollmenu {
+    background-color: white;
+    overflow: auto;
+    white-space: nowrap;
+  }
+
+  div.scrollmenu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+
+  div.scrollmenu a:hover {
+    background-color: #777;
+  }
+}
+
+@media only screen  and (max-width: 950px) and (min-width: 425px){
+  .topbar img{
+    position :absolute;
+    top:20px;
+    left: 0; 
+  }
+}
+
+@media only screen and (max-width: 425px) and (orientation: portrait){
+  .topbar{
+  display: none;
+  }
+
+  .outer-container {
+    display: none;
+  }
+
+  .tilt-me-display{
+    padding-top: 5%;
+    display: -ms-grid;
+  }
+
+  .tilt-me-header{
+    padding-top: 15%;
+    font-family: "Work Sans", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #303030;
+    text-transform: uppercase;
+  }
+
+  .tilt-me-subheader{
+    font-family: "AlphaMack AOE";
+    color: #ee2e31;
+    font-size: 90px;
+    font-weight: normal;
+    font-style: normal;
+    text-transform: capitalize;
+    text-align: center;
+  }
+}

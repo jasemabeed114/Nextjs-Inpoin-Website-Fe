@@ -2,6 +2,7 @@
 // last updated: 13/04/2021
 // @author: mahenza
 import React, { Component } from "react";
+import Tilt from 'react-tilt'
 
 import {
     ContentWrapper,
@@ -24,9 +25,11 @@ class _AboutInpoinView extends Component {
                 <Row>
                     <Side>
                         <AboutInpoin>
+                            <Tilt className="Tilt" options={{ max: 35 }} >
                             <AboutTitleGroup>
                                 <AboutInpoinTitle>Let's get <br />to know <br />about<AboutInpoinSubtitle>Inpoin!</AboutInpoinSubtitle></AboutInpoinTitle>
                             </AboutTitleGroup>
+                            </Tilt>
                         </AboutInpoin>
                         <Description>
                             Inpoin is a platform that help to boost your customer engagement,
@@ -39,8 +42,10 @@ class _AboutInpoinView extends Component {
                             approaches.
                         </MobileDescription>
                     </Side>
-                    <Main>
-                        <Visual src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/A1-AboutInpoin.png" />
+                    <Main>                        
+                        
+                            <Visual src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/A1-AboutInpoin.png" />
+                       
                     </Main>
                 </Row>
             </ContentWrapper>

@@ -14,6 +14,7 @@ import '../components/pages/WebTour/WebTour.css';
 import '../components/pages/Register/Register.css';
 import '../components/pages/Home/MF_Home.css';
 import '../components/pages/ProductServices/ProductServices.css';
+import '../components/pages/Community/Community.css';
 import '../components/pages/ContactUs/ContactUs.css';
 
 function MyApp({ Component, pageProps })  {
