@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { FaMobile } from "react-icons/fa"
+import Link from "next/link";
 
 
 import {
@@ -15,7 +15,9 @@ class Topbar extends Component {
         return (
             <>
                 <Container>
-                    <img src="http://in-poin.mahenza.com/wp-content/uploads/2021/02/inpoin_logo_svg.png"/>
+                    <Link href="/">
+                        <img src="http://in-poin.mahenza.com/wp-content/uploads/2021/02/inpoin_logo_svg.png"/>
+                    </Link>
                     <Navbar />
                 </Container>
             </>
