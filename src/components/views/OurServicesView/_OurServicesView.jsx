@@ -118,9 +118,12 @@ class _OurServicesView extends Component {
             </Services>     
           </Side>
           <Main>
-            <VideoFrame 
+            <VideoFrame contenteditable="true"
               src="http://in-poin.mahenza.com/wp-content/uploads/2021/02/WhatsApp-Video-2021-02-27-at-3.59.12-PM.mp4?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&mute=1"
               frameborder="0"
+              controls
+              autoplay 
+              muted
               allow="accelerometer"
               allowfullscreen="allowfullscreen"
               type="video/mp4"></VideoFrame>

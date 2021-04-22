@@ -1,10 +1,10 @@
 //
-// last updated: 13/04/2021
+// last updated: 21/04/2021
+// - changing iframe to video styled ln. 372
 // @author: mahenza
 import React from 'react';
 import styled from "styled-components"
 import device from "../../utils/device"
-import Icon from "./Icon"
 
 export const ContentWrapper = styled.div`
   width: 100%;
@@ -18,20 +18,20 @@ export const Row = styled.div`
 `;
 
 export const Side = styled.div`
-  flex: 50%;
 @media only screen and ${device.tabletL}{
   flex: 50%;
   padding: 5px;
 }
+  flex: 50%;
 `;
 
 export const Main = styled.div`
-  flex: 50%;
-  align-self: center;
 @media only screen and ${device.tabletL}{
   flex: 50%;
   padding: 5px;
 }
+  flex: 50%;
+  align-self: center;
 `;
 
 export const Services = styled.div`
@@ -50,18 +50,21 @@ export const OurServiceGroup = styled.div`
 `;
 
 export const OurServicesBlackTitle = styled.h2`
+@media screen and ${device.tabletL} and (min-width: 426px){
+  font-size: 30px;
+}
   font-family: "Work Sans", sans-serif;
   font-size: 60px;
   font-weight: bold;
   color: #303030;
   text-transform: uppercase;
   text-align: left;
-@media screen and ${device.tabletL} and (min-width: 426px){
-  font-size: 30px;
-}
 `;
 
 export const OurServicesRedTitle = styled.span`
+@media screen and ${device.tabletL} and (min-width: 426px){
+  font-size: 50px;
+}
   font-family: "AlphaMack AOE";
   color: #ee2e31;
   font-size: 90px;
@@ -69,12 +72,12 @@ export const OurServicesRedTitle = styled.span`
   font-style: normal;
   text-transform: capitalize;
   text-align: left;
-@media screen and ${device.tabletL} and (min-width: 426px){
-  font-size: 50px;
-}
 `;
 
 export const ServiceDescription = styled.li`
+@media screen and ${device.tabletL} and (min-width: 426px){
+  margin: 5px 0;
+}
   font-family: "Work Sans", sans-serif;
   color: color: #000000DE;
   margin: 10px 40px;
@@ -85,12 +88,12 @@ export const ServiceDescription = styled.li`
     width: 1em;
     margin-left: -1em;
   }
-@media screen and ${device.tabletL} and (min-width: 426px){
-  margin: 5px 0;
-}
 `;
 
 export const ServiceList = styled.ul`
+@media screen and ${device.tabletL} and (min-width: 426px){
+  display: none;
+}
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -98,13 +101,9 @@ export const ServiceList = styled.ul`
   text-align: left !important;
   padding: 20px;
   line-height: 150%;
-@media screen and ${device.tabletL} and (min-width: 426px){
-  display: none;
-}
 `;
 
 export const MobileServiceList = styled.ul`
-  display: none;
 @media screen and ${device.tabletL} and (min-width: 426px){
   display: block;
   font-size: 10px;
@@ -113,42 +112,38 @@ export const MobileServiceList = styled.ul`
   padding-top: 10px;
   line-height: 150%;
 }
+  display: none;
 `;
 
 export const IconGroup = styled.div`
+@media screen and ${device.tabletL} and (min-width: 426px){
+  display: none;
+}
   display: flex;
   flex-direction: column;
   align-self: flex-start;
-@media screen and ${device.tabletL} and (min-width: 426px){
-  display: none;
-}
 `;
 
 export const MobileIconGroup = styled.div`
-  display: flex;
-  flex-direction: column;
-  display: none;
 @media screen and ${device.tabletL} and (min-width: 426px){
   display: block;
 }
+  display: flex;
+  flex-direction: column;
+  display: none;
 `;
 
 export const Icons = styled.div`
+@media screen and ${device.tabletL} and (min-width: 426px){
+  padding-top: 10px;
+}
   width: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   padding-top: 25px;
-@media screen and ${device.tabletL} and (min-width: 426px){
-  padding-top: 10px;
-}
 `;
-
-// const Svg = styled(Icon)` 
-//   width: 50px; 
-//   height: 50px;
-// `;
 
 export const DesignIcon = () => (
   <svg
@@ -355,6 +350,9 @@ export const MobileIntegrationIcon = () => (
 )
 
 export const IconsTitle = styled.span`
+@media screen and ${device.tabletL} and (min-width: 426px){
+  font-size: 18px;
+}
   font-family: "AlphaMack AOE";
   color: #000000DE;
   font-size: 40px;
@@ -363,12 +361,12 @@ export const IconsTitle = styled.span`
   text-transform: capitalize;
   text-align: left;
   line-height: 150%;
-@media screen and ${device.tabletL} and (min-width: 426px){
-  font-size: 18px;
-}
 `;
 
-export const VideoFrame = styled.iframe`
+export const VideoFrame = styled.video`
+@media screen and ${device.tabletL} and (min-width: 426px){
+  height: 70vh;
+}
   top: 0;
   left: 0;
   bottom: 0;
@@ -376,7 +374,5 @@ export const VideoFrame = styled.iframe`
   width: 100%;
   height: 50vh;
   border: none;
-@media screen and ${device.tabletL} and (min-width: 426px){
-  height: 70vh;
-}
+  box-sizing:content-box;
 `;
