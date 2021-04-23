@@ -38,7 +38,7 @@ export { default as _ExitTourView } from "./views/ExitTourView/_ExitTourView";
 // @author: mahenza
 export { default as GameMechanicsView } from "./views/GameMechanicsView/GameMechanicsView";
 export { default as ListVouchersView } from "./views/ListVouchersView/ListVouchersView";
-
+export { default as UnderConstruction } from "./views/UnderConstruction/UnderConstruction";
 
 //Contact Us views
 // 

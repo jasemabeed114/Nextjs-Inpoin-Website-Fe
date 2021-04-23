@@ -8,6 +8,7 @@ import {
     _HowWeWorkView,
     GameMechanicsView,
     ListVouchersView,
+    UnderConstruction
 } from "../../index";
 
 class ProductServices extends Component {
@@ -26,7 +27,7 @@ class ProductServices extends Component {
                 <div className="outer-container scrollmenu">
                     <div className="container-product-services draggable">
                         <section>
-                            <_MyInpoinView />
+                            <UnderConstruction />
                         </section>
                         <section>
                             <_ShowcaseView />

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Tilt from 'react-tilt';
 
 import {   
     ContentWrapper,
@@ -38,12 +39,14 @@ class ContactUsView extends Component {
                 <Row>
                     <Side>
                         <ContactUs>
+                            <Tilt className="Tilt" options={{ max: 35 }} >
                             <ContactUsGroup>
                                 <ContactUsTitle>
                                     Contact
                                 <ContactUsSubtitle>Us</ContactUsSubtitle>
                                 </ContactUsTitle>
                             </ContactUsGroup>
+                            </Tilt>
                         </ContactUs>
                         <Visual src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/ContactUs.png" />
                     </Side>

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Tilt from 'react-tilt';
 
 import {
     ContentWrapper,
@@ -21,15 +22,14 @@ class _ShowcaseView extends Component {
                 <Row>                
                     <Side>
                         <Showcase>
+                            <Tilt className="Tilt" options={{ max: 35 }} >
                             <ShowcaseTitle>
                                 <ShowcaseBlackTitle>
                                     Experience our game <br/>and earn
                             <ShowcaseRedTitle>Your Points!</ShowcaseRedTitle>
                                 </ShowcaseBlackTitle>
-
                             </ShowcaseTitle>
-                            <ShowcaseGroup>
-                            </ShowcaseGroup>
+                            </Tilt>
                         </Showcase>
                     </Side>
                     <Main>

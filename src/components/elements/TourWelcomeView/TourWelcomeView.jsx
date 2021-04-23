@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Tilt from 'react-tilt'
+import Tilt from 'react-tilt';
 
 import { Dialog } from '@material-ui/core/';
 import Router from 'next/router';

@@ -2,6 +2,7 @@
 // last updated: 16/04/2021
 // @author: mahenza
 import React, { Component } from "react";
+import Tilt from 'react-tilt';
 
 import {
   ContentWrapper,
@@ -43,10 +44,12 @@ class _OurServicesView extends Component {
         <Row>
           <Side>
             <Services>
+              <Tilt className="Tilt" options={{ max: 35 }} >
               <OurServicesTitle>
                 <OurServicesBlackTitle>Our</OurServicesBlackTitle>
                 <OurServicesRedTitle>Services</OurServicesRedTitle>
               </OurServicesTitle>
+              </Tilt>
               <OurServiceGroup>
                 <IconGroup>
                   <Icons>
@@ -79,7 +82,7 @@ class _OurServicesView extends Component {
                     <MobileIntegrationIcon />
                     <IconsTitle>Integration</IconsTitle>
                   </Icons>
-                </MobileIconGroup>
+                </MobileIconGroup>   
                 <ServiceList>
                   <ServiceDescription>
                     Support in gamification project’s definition and engagement

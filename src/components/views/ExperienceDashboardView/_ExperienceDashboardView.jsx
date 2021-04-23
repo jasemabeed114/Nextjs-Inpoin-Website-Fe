@@ -2,6 +2,7 @@
 // last updated: 16/04/2021
 // @author: mahenza
 import React, { Component } from "react";
+import Tilt from 'react-tilt';
 
 import {
     ContentWrapper,
@@ -31,6 +32,7 @@ class _ExperienceDashboardView extends Component {
                 <Row>
                     <Side>
                         <ExperienceDashboard>
+                            <Tilt className="Tilt" options={{ max: 35 }} >
                             <ExperienceDashboardTitle>
                                 <ExperienceDashboardBlackTitle>
                                     Take a look on our
@@ -47,6 +49,7 @@ class _ExperienceDashboardView extends Component {
                                     </ExperienceDashboardRedTitle>
                                 </ExperienceDashboardBlackTitle>
                             </MobileExperienceDashboardTitle>
+                            </Tilt>
                             <ExperienceDashboardGroup>
                                 <ExperienceDashboardList>
                                     <DashboardNarrativeTitle>

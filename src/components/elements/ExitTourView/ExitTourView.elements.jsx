@@ -1,34 +1,45 @@
+//
+// last updated: 19/04/2021
+// @author: mahenza
 import styled from "styled-components";
+import device from "../../utils/device";
 
 export const ContentWrapper = styled.div`
-  @media(max-width: 768px) {
-    flex-direction: column-reverse;
-  }
   width: 100%;
   display: flex;
+  padding-top: 5%;
+  padding-left: 5%;
+`;
+
+export const Row = styled.div`
+  display: flex;
+`;
+
+export const Side = styled.div`
+@media only screen and ${device.tabletL}{
+  flex: 40%;
+  padding: 5px;
+}
+  flex: 55%;
+  align-self: flex-start;
+`;
+
+export const Main = styled.div`
+@media only screen and ${device.tabletL}{
+  flex: 60%;
+  padding-left: 25px;
+}
+  flex: 50%;
+  align-self: flex-end;
 `;
 
 export const ExitTour = styled.div`
-  @media(max-width: 768px) {
-    width: 100%;
-    padding-top: 1%;    
-  }
   display: flex;
   flex-direction: column;
-  width: 50%;
-  padding-top: 20%;
 `;
 
 export const ExitTourGroup = styled.div`
-  @media(max-width: 768px) {
-    width: 100%;   
-  }
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  text-align: start;
-  width: 60%;
-  position: relative;
 `;
 
 export const ExitTourTitle = styled.div`
@@ -36,17 +47,13 @@ export const ExitTourTitle = styled.div`
   align-items: left;
 `;
 
-// export const LeftColumn = styled.div`
-//   max-width: 70%;
-// `;
-
-// export const RightColumn = styled.div`
-//   max-width: 50%;
-// `;
 
 export const ExitTourWhiteTitle = styled.h2`
+@media screen and ${device.tabletL} and (min-width: 426px){
+  font-size: 70px;
+}
   font-family: "AlphaMack AOE" !important;
-  font-size: 60px !important;
+  font-size: 90px;
   color: white !important;
   font-weight: normal !important;
   text-align: left !important;
@@ -55,11 +62,11 @@ export const ExitTourWhiteTitle = styled.h2`
 `;
 
 export const ExitText = styled.h5`
-  @media(max-width: 768px) {
-    font-size: 24px;
-  }
+@media screen and ${device.tabletL} and (min-width: 426px){
+  font-size: 18px;
+}
   font-family: "Work Sans", sans-serif !important;
-  font-size: 36px;
+  font-size: 32px;
   font-weight: lighter !important;
   text-align: left !important;
   color: #303030 !important;
@@ -67,9 +74,9 @@ export const ExitText = styled.h5`
 `;
 
 export const ExitScoring = styled.h4`
-  @media(max-width: 768px) {
-    font-size: 24px;
-  }
+@media screen and ${device.tabletL} and (min-width: 426px){
+  font-size: 18px;
+}
   font-family: "Work Sans", sans-serif !important;
   font-size: 36px;
   font-weight: bold !important;
@@ -79,24 +86,28 @@ export const ExitScoring = styled.h4`
 `;
 
 export const ExitScoringLogo = styled.img`
-  max-width: 100%;
+@media screen and ${device.tabletL} and (min-width: 426px){
+  max-width: 20%;
+}
+  max-width: 30%;
 `;
 
 export const Visual = styled.img`
-  @media(max-width: 768px) {
-    align-self: center;
-  }
-  max-width: 60%;
+  max-width: 100%;
   height: auto;
   padding-top: 15%;
 `;
 
-
-
 export const RedeemButton = styled.div`
+@media screen and ${device.tabletL} and (min-width: 426px){
+  font-size: 18px;
+  width: 150px;
+  height: 44px;
+  padding: 10px;
+}
     background-color: #ED2B2E;
     color: white;
-    font-size: 36px !important;
+    font-size: 36px;
     border-radius: 10px;
     border: none;
     width: 300px;
@@ -105,7 +116,6 @@ export const RedeemButton = styled.div`
     margin-top: 10%;
     outline: none;
     box-shadow: 5px 10px #888888;
-    text-decoration: none;
 :hover{
     background-color: white;
     color: #ED2B2E;

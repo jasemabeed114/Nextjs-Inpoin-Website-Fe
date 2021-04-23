@@ -4,7 +4,6 @@ import device from "../../utils/device";
 export const ContentWrapper = styled.div`
   width: 100%;
   display: flex;
-  padding-top: 5%;
   padding-left: 5%;
 `;
 
@@ -15,6 +14,7 @@ export const Row = styled.div`
 export const Side = styled.div`
   flex: 55%;
   padding: 20px;
+  align-self: flex-start;
 @media only screen and ${device.tabletL}{
   flex: 40%;
   padding: 5px;
@@ -33,10 +33,6 @@ export const Main = styled.div`
 export const ExitTour = styled.div`
   display: flex;
   flex-direction: column;
-
-  @media screen and(max-width: 1550px) and(min-width: 426px), (orientation: landscape){
-  padding-top: 15%;
-}
 `;
 
 export const ExitTourGroup = styled.div`

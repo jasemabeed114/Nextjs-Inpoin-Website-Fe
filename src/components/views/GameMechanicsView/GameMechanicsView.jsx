@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Tilt from 'react-tilt';
 
 import {
     ContentWrapper,
@@ -38,9 +39,11 @@ class GameMechanicsView extends Component {
                         <GameMechanicsList>
                             <ListItem className="box1">
                             <GameMechanics>
+                                <Tilt className="Tilt" options={{ max: 35 }} >
                                 <GameMechanicsTitleGroup>
                                     <GameMechanicsTitle>Game<GameMechanicsSubtitle>Mechanics</GameMechanicsSubtitle></GameMechanicsTitle>
                                 </GameMechanicsTitleGroup>
+                                </Tilt>
                                 <Description>
                                         Build your customer loyalty through
                                     gamification approaches such as points, 

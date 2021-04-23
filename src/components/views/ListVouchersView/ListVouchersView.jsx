@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Side } from "../TourWelcomeView/_TourWelcomeView.elements";
+import Tilt from 'react-tilt';
 
 import {
     ContentWrapper,
@@ -21,9 +21,11 @@ class ListVouchersView extends Component {
                 
                 <Row>  
                     <ListVouchers>
+                        <Tilt className="Tilt" options={{ max: 35 }} >
                         <ListVouchersTitleGroup>
                             <ListVouchersTitle>List<ListVouchersSubtitle>Vouchers</ListVouchersSubtitle></ListVouchersTitle>
                         </ListVouchersTitleGroup>
+                        </Tilt>
                     </ListVouchers>
                     <Main>
                         <Vouchers>

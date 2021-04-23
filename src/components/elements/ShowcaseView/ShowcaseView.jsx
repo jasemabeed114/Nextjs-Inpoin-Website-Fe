@@ -1,8 +1,9 @@
 import React, { Component } from "react";
+import Tilt from 'react-tilt';
 import { Dialog } from "@material-ui/core";
 import { runGame } from "../../../actions";
 import { ACTIVITY } from "../../../configs";
-import { Iframe, PlayButton, DialogContent } from "../TourWelcomeView/TourWelcomeView.elements";
+import { Iframe, DialogContent } from "../TourWelcomeView/TourWelcomeView.elements";
 
 import {
   ContentWrapper,
@@ -15,6 +16,7 @@ import {
   ShowcaseRedTitle,
   ShowcaseGroup,
   Visual,
+  PlayButton
 } from "./ShowcaseView.elements";
 
 class ShowcaseView extends Component {
@@ -48,12 +50,14 @@ class ShowcaseView extends Component {
         <Row>
           <Side>
             <Showcase>
+              <Tilt className="Tilt" options={{ max: 35 }} >
               <ShowcaseTitle>
                 <ShowcaseBlackTitle>
                     Experience our game and earn {'   '}
                     <ShowcaseRedTitle>Your Points!</ShowcaseRedTitle>
                 </ShowcaseBlackTitle>
               </ShowcaseTitle>
+              </Tilt>
               <ShowcaseGroup>
                 <PlayButton onClick={this._handleStartLuckyEnvelope}>Let's Play</PlayButton>
               </ShowcaseGroup>                   

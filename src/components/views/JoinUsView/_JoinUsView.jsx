@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Tilt from 'react-tilt';
 
 import { 
     ContentWrapper, 
@@ -30,9 +31,11 @@ class _JoinUsView extends Component{
                 <Row>
                     <Side>
                         <JoinUs>
+                            <Tilt className="Tilt" options={{ max: 35 }} >
                             <JoinUsTitleGroup>
                                 <JoinUsTitle>Join<JoinUsSubtitle>Us</JoinUsSubtitle></JoinUsTitle>
                             </JoinUsTitleGroup>
+                            </Tilt>
                             <Description>
                                 For any inquiries and needs<br/> please fill the form and contact us.
                             </Description>

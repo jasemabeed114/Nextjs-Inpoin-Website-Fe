@@ -1,8 +1,12 @@
 import React, { Component } from "react";
+import Tilt from 'react-tilt';
 import Link from "next/link";
 
 import {
     ContentWrapper,
+    Row,
+    Side,
+    Main,
     ExitTourWhiteTitle,
     ExitText,
     Visual,
@@ -56,19 +60,27 @@ class ExitTourView extends Component {
     const { poin } = this.props;
     return (
       <ContentWrapper>
-        <ExitTour>
-          <ExitTourTitle>
-            <ExitTourWhiteTitle>
-              Congratulations!
-            </ExitTourWhiteTitle>                     
-          </ExitTourTitle>
-          <ExitText>you have completed the tour</ExitText>
-          <ExitScoring>YOU GOT {poin} points from <ExitScoringLogo src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/myinpoin-logo.png"></ExitScoringLogo> </ExitScoring>
-          <Link href="/?from=tour" >
-            <RedeemButton> Redeem Now </RedeemButton>
-          </Link>
-        </ExitTour>
-        <Visual src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/visual-tour-9.png"></Visual>
+        <Row>
+          <Side>
+            <ExitTour>
+              <Tilt className="Tilt" options={{ max: 35 }} >
+              <ExitTourTitle>
+                <ExitTourWhiteTitle>
+                  Congratulations!
+                </ExitTourWhiteTitle>
+              </ExitTourTitle>
+              <ExitText>you have completed the tour</ExitText>
+              <ExitScoring>YOU GOT {poin} points from <ExitScoringLogo src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/myinpoin-logo.png"></ExitScoringLogo> </ExitScoring>
+              </Tilt>
+              <Link href="/?from=tour" >
+                <RedeemButton> Redeem Now </RedeemButton>
+              </Link>
+            </ExitTour>
+          </Side>
+          <Main>
+            <Visual src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/visual-tour-9.png"></Visual>
+          </Main>
+        </Row>
       </ContentWrapper>
     );
   }

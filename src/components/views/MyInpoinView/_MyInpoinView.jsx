@@ -2,6 +2,7 @@
 // last updated: 13/04/2021
 // @author: mahenza
 import React, { Component } from "react";
+import Tilt from 'react-tilt';
 
 import {
     ContentWrapper,
@@ -31,17 +32,12 @@ class _MyInpoinPage extends Component {
         return (
             <ContentWrapper>
                 <Row>
-                   
-                    <p className="clip">UNDER DEVELOPMENT
-                    <MyInpoinBlackTitle>scroll down to preview next section</MyInpoinBlackTitle>
-                    </p>
-                </Row>
-                
-                {/* <Row>
                     <Side>
+                        <Tilt className="Tilt" options={{ max: 35 }} >
                         <MyInpoinBlackTitle>MANAGE YOUR REWARD <br/> POINTS WITH JUST
                         <MyInpoinRedSubTitle>One-Click Away!</MyInpoinRedSubTitle>
                         </MyInpoinBlackTitle>
+                        </Tilt>
                         <MyInpoinText>myinpoin is an exclusive redemption program mobile<br/> application that help you to collect reward points in one wallet.</MyInpoinText>                   
                         <MyInpoinList>
                             <WalletIcon/>
@@ -101,7 +97,7 @@ class _MyInpoinPage extends Component {
                     <Main>
                         <Visual src="https://inpoin.id/static/images/LandingPage/my_inpoin_app.png" alt="android-mobile-myinpoin"></Visual>
                     </Main>
-                </Row>  */}
+                </Row> 
             </ContentWrapper>
         );
     }

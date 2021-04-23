@@ -60,7 +60,7 @@ export const HowWeWorkWhiteTitle = styled.h2`
 export const HowWeWorkRedTitle = styled.span`
 @media screen and ${device.tabletL} and (min-width: 426px){
   font-size: 40px;
-  margin-top: -55px;
+  margin-top: -25px;
 }
   font-family: "AlphaMack AOE";
   color: #ee2e31;

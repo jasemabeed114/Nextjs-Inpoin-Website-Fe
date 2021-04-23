@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Tilt from 'react-tilt';
 import { 
     ContentWrapper,
     Description,
@@ -13,6 +14,7 @@ import {
     ListPartnerFAQGroup,
     SectionWrapper,
     SectionPartner,
+    ReadMoreButton
 } from "../ListPartnersFAQView/ListPartnersFAQView.elements";
 
 import Accordion from '../../elements/Accordion/Accordion';
@@ -153,6 +155,7 @@ class ListPartnersFAQView extends Component{
         <ListPartnerFAQ>
           <SectionWrapper>
             <SectionPartner>
+              <Tilt className="Tilt" options={{ max: 35 }} >
               <ListPartnerFAQTitle>
                 <ListPartnerFAQBlackTitle>
                   Project
@@ -161,6 +164,7 @@ class ListPartnersFAQView extends Component{
                   Portfolio
                 </ListPartnerFAQRedTitle>
               </ListPartnerFAQTitle>
+              </Tilt>
               <Description>
                 Fulfilling their business objectives and increase their costumer loyalty, Inpoin has the previlege of working with some of the most costumer centric companies
               </Description>
@@ -214,15 +218,20 @@ class ListPartnersFAQView extends Component{
           </SectionWrapper>
           <SectionWrapper>
             <div style={{ flex: 1, alignSelf: 'left' }}>
+              <Tilt className="Tilt" options={{ max: 35 }} >
               <ListPartnerFAQBlackTitle>
                 FAQ
               </ListPartnerFAQBlackTitle>
+              </Tilt>
               <Description>
                 Peoples usually ask about
               </Description>
               <MobileDescription>
                 Peoples usually ask about
               </MobileDescription>
+              <ReadMoreButton href="https://inpoin.id/myinpoin/faq" rel="noopener noreferrer nofollow" target="_blank">
+                Read More..
+              </ReadMoreButton>
             </div>
 
             <div style={{ flex: 1, alignSelf: 'center' }}>

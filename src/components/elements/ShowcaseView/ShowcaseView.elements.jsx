@@ -5,12 +5,11 @@
 import styled from "styled-components";
 import device from "../../utils/device";
 
-export const ContentWrapper = styled.div`#
-@media only screen and ${device.tabletL}{
-  padding-top: 80%;
-}
+export const ContentWrapper = styled.div`
   width: 100%;
   display: flex;
+  padding-top: 5%;
+  padding-left: 5%;
 `;
 
 export const Row = styled.div`
@@ -55,7 +54,7 @@ export const ShowcaseBlackTitle = styled.h2`
   font-size: 20px;
 }
   font-family: "Work Sans", sans-serif;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: bold;
   color: #303030;
   text-transform: uppercase;
@@ -81,6 +80,32 @@ export const Visual = styled.img`
 }
   max-width: 100%;
   height: auto;
+`;
+
+export const PlayButton = styled.div`
+    background-color: #ED2B2E;
+    color: white;
+    font-size: 36px;
+    border-radius: 10px;
+    border: none;
+    width: 300px;
+    height: 88px;
+    padding: 20px;
+    margin-top: 10%;
+    outline: none;
+    box-shadow: 5px 10px #888888;
+:hover{
+    background-color: white;
+    color: #ED2B2E;
+    box-shadow: none;
+    transition: 0.3s;
+}
+@media screen and ${device.tabletL} and (min-width: 426px){
+  font-size: 18px;
+  width: 150px;
+  height: 44px;
+  padding: 10px;
+}
 `;
 
 export const ShowcaseFrame = styled.iframe`

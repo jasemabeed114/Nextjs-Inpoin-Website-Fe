@@ -2,7 +2,7 @@
 // last updated: 13/04/2021
 // @author: mahenza
 import React, { Component } from "react";
-import Tilt from 'react-tilt'
+import Tilt from 'react-tilt';
 
 import {
     ContentWrapper,

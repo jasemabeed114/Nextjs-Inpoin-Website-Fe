@@ -2,7 +2,7 @@
 // last updated: 21/04/2021
 // - commented out view sections, and adding clip txt css to display underconstruction 
 // @author: mahenza
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
 import device from "../../utils/device";
 
@@ -10,74 +10,60 @@ export const ContentWrapper = styled.div`
   width: 100%;
   display: flex;
   padding-left: 5%;
-  background: white;
 `;
 
 export const Row = styled.div`
   display: flex;
   width: 100%;
-
-& p{ margin: 0px; }
-
-& .clip{
-  /*
-  Ensure background is added first
-  */
-  background: linear-gradient(to bottom, #eee, rgba(222,112,6,0.2), #ee2e31),url(http://in-poin.mahenza.com/wp-content/uploads/2021/04/bg-underconst-1.jpg);
-
-  //  background-attachment: fixed;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  font-family: "AlphaMack AOE";
-  font-size: 12vw;
-  font-weight: bold;
-  text-align: center;
-}
-
 `;
 
 export const Side = styled.div`
-  flex: 60%;
-  padding: 20px;
 @media only screen and ${device.tabletL}{
   flex: 30%;
   padding: 5px;
   align-self: flex-end;
 }
+  flex: 60%;
+  padding: 20px;
 `;
 
 export const Middle = styled.div`
+@media only screen and ${device.tabletL}{
+  flex: 30%;
+}
   flex: 10%;
   align-self: flex-end;
   padding-bottom: 10%;
-@media only screen and ${device.tabletL}{
-  flex: 30%;
-}
+  text-align: center;
 `;
 
 export const Main = styled.div`
-  flex: 30%;
-  padding-right: 15px;
-  align-self: flex-end;
 @media only screen and ${device.tabletL}{
   flex: 50%;
   align-self: flex-end;
+  margin-bottom: 5%;
 }
+  flex: 30%;
+  padding-right: 15px;
+  align-self: flex-end;
 `;
 
 export const MyInpoinBlackTitle = styled.h2`
+@media screen and ${device.tabletL} and (min-width: 426px){
+  font-size: 20px;
+}
   font-family: "Work Sans", sans-serif;
   font-size: 40px;
   font-weight: bold;
   color: #303030;
   text-transform: uppercase;
   text-align: left;
-@media screen and ${device.tabletL} and (min-width: 426px){
-  font-size: 20px;
-}
 `;
 
 export const MyInpoinRedSubTitle = styled.span`
+@media screen and ${device.tabletL} and (min-width: 426px){
+  font-size: 30px;
+}
   font-family: "AlphaMack AOE";
   color: #ee2e31;
   font-size: 52px;
@@ -85,33 +71,33 @@ export const MyInpoinRedSubTitle = styled.span`
   font-style: normal;
   text-transform: capitalize;
   text-align: left;
-@media screen and ${device.tabletL} and (min-width: 426px){
-  font-size: 30px;
-}
 `;
 
 export const MyInpoinText = styled.p`
+@media screen and ${device.tabletL} and (min-width: 426px){
+  font-size: 12px;
+}
     font-size: 20px;
     text-align: left;
     padding: 15px 0 15px;
     line-height: 150%;
-@media screen and ${device.tabletL} and (min-width: 426px){
-  font-size: 12px;
-}
 `;
 
 export const DownloadButton = styled.a`
 @media screen and ${device.tabletL} and (min-width: 426px){
   & img.my-inpoin{
-   width: 100%;
+   width: 60%;
  }
  & img.google-play{
-    width: 100%;
+    width: 60%;
  }
 }
 `;
 
 export const Visual = styled.img`
+@media screen and ${device.tabletL} and (min-width: 426px){
+  max-width: 50%;
+}
   max-width: 100%;
   height: auto;
     -webkit-user-select: none;
@@ -154,6 +140,9 @@ export const MobileRedeemIcon = () => (
 )
 
 export const IconTitle = styled.span`
+@media screen and ${device.tabletL} and (min-width: 426px){
+  font-size: 16px;
+}
     font-family: "Work Sans", sans-serif;  
     font-weight: bold;
     font-size: 24px;
@@ -162,33 +151,33 @@ export const IconTitle = styled.span`
       content: " ";
   }
   line-height: 150%;
-@media screen and ${device.tabletL} and (min-width: 426px){
-  font-size: 16px;
-}
 `;
 
 export const MyInpoinList = styled.div`
+@media screen and ${device.tabletL} and (min-width: 426px){
+  display: none;
+}
     list-style: none;
     color: #303030;
     font-size: 20px;
     text-align: justify;
-@media screen and ${device.tabletL} and (min-width: 426px){
-  display: none;
-}
 `;
 
 export const MobileMyInpoinList = styled.div`
+@media screen and ${device.tabletL} and (min-width: 426px){
+  display: block;
+}
   list-style: none;
   color: #303030;
   font-size: 20px;
   text-align: justify;
   display: none;
-@media screen and ${device.tabletL} and (min-width: 426px){
-  display: block;
-}
 `;
 
 export const Item = styled.li`{
+  @media screen and ${device.tabletL} and (min-width: 426px){
+  font-size: 12px;
+}
   &:before {
       color: black;
       font-weight: bold;
@@ -201,7 +190,4 @@ export const Item = styled.li`{
   &:first-child {
       margin-top:0;
   }
-@media screen and ${device.tabletL} and (min-width: 426px){
-  font-size: 12px;
-}
 }`;

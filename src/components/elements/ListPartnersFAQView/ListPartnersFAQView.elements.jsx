@@ -177,3 +177,20 @@ export const SectionPartner = styled.div`
   align-self: center;
 `;
 
+export const ReadMoreButton = styled.div`
+  background-color: #303030;
+    color: white;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    width: 120px;
+    height: 40px;
+    padding: 10px;
+    outline: none;
+:hover{
+    background-color:white;
+    color: #303030;
+    box-shadow: none;
+    transition: 0.3s;
+`;
+

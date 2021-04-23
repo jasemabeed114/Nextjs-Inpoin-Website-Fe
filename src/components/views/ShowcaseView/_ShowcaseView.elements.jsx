@@ -6,7 +6,6 @@ export const ContentWrapper = styled.div`
   display: flex;
   padding-top: 5%;
   padding-left: 5%;
-  align-self: flex-end;
 `;
 
 export const Row = styled.div`
@@ -26,7 +25,7 @@ export const Side = styled.div`
 
 export const Main = styled.div`
   flex: 50%;
-  align-self: flex-end;
+  align-self: center;
 @media only screen and ${device.tabletL}{
   flex: 70%;
   padding: 25px;
