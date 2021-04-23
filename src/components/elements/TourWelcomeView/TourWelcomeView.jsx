@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
+import Tilt from 'react-tilt'
+
 import { Dialog } from '@material-ui/core/';
 import Router from 'next/router';
 import {
     ContentWrapper,
+    Row,
+    Side,
+    Main,
     PlayButton,
     Visual,
     TourWelcome,
@@ -49,8 +54,6 @@ class TourWelcomeView extends Component{
     );
   }
 
-  
-
   render(){
 
     const { fullName = '' } = this.props;
@@ -58,24 +61,30 @@ class TourWelcomeView extends Component{
 
     return(
       <ContentWrapper>
-        <Visual src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/Sally.png"></Visual>
-        <TourWelcome>
-          {firstName &&
-            <TourWelcomeRedTitle lineHeight="0.6">
-              Hello {firstName}
-            </TourWelcomeRedTitle>
-          }
-          <TourWelcomeBlackTitle>
-            Push <br></br>the button <br></br>and get
-          </TourWelcomeBlackTitle>
-          <TourWelcomeRedTitle>
-            Your Points!
-          </TourWelcomeRedTitle>
-          <PlayButton onClick={this._handleStartLuckySpin}>Play</PlayButton>
-        </TourWelcome>
-        
-        {this._renderDialogLuckySpin()}
-        
+        <Row>
+          <Side>
+              <Visual src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/Sally.png"/>
+          </Side>
+          <Main>
+            <TourWelcome>
+              <Tilt className="Tilt" options={{ max: 35 }} >
+              {firstName &&
+                <TourWelcomeRedTitle lineHeight="0.6">
+                  Hello {firstName}
+                </TourWelcomeRedTitle>
+              }
+              <TourWelcomeBlackTitle>
+                Push <br></br>the button <br></br>and get
+              </TourWelcomeBlackTitle>
+              <TourWelcomeRedTitle>
+                Your Points!
+              </TourWelcomeRedTitle>
+              </Tilt>
+              <PlayButton onClick={this._handleStartLuckySpin}>Play</PlayButton>
+            </TourWelcome>
+          </Main>
+        </Row>
+        {this._renderDialogLuckySpin()}        
       </ContentWrapper>
     );
   }

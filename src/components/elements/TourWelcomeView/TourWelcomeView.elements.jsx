@@ -1,50 +1,65 @@
+//
+// last updated: 19/04/2021
+// @author: mahenza
 import styled from "styled-components";
+import device from "../../utils/device";
 
 export const ContentWrapper = styled.div`
-  @media(max-width: 768px) {
-    flex-direction: column;
-  }
   width: 100%;
   display: flex;
-  padding-top: 15%;
+  padding-left: 5%;
+`;
+
+export const Row = styled.div`
+  display: flex;
+`;
+
+export const Side = styled.div`
+@media only screen and ${device.tabletL}{
+  flex: 60%;
+  padding: 5px;
+}
+  flex: 60%;
+  padding: 20px;
+`;
+
+export const Main = styled.div`
+  @media only screen and ${device.tabletL}{
+    flex: 40%;
+  }
+    flex: 40%;
+    align-self: center;
 `;
 
 export const TourWelcome = styled.div`
-  @media(max-width: 768px) {
-    width: 100%;
-    padding-top: 5%;
-  }
+@media screen and(max-width: 1550px) and(min-width: 426px), (orientation: landscape){
+  padding-top: 15%;
+}
   display: flex;
   flex-direction: column;
-  width: 50%;
-  padding-top: 20%;
 `;
 
 export const TourWelcomeGroup = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  text-align: start;
-  width: 60%;
-  position: relative;
 `;
 
 export const TourWelcomeBlackTitle = styled.h2`
-  @media(max-width: 1337px) {
-    font-size: 32px
-  }
+@media screen and ${device.tabletL} and (min-width: 426px){
+  font-size: 30px;
+}
   font-family: "Work Sans", sans-serif;
   font-size: 60px;
   font-weight: bold;
   color: #303030;
   text-transform: uppercase;
   text-align: left;
+  line-height: 100%;
 `;
 
 export const TourWelcomeRedTitle = styled.span`
-  @media(max-width: 1337px) {
-    font-size: 64px
-  }
+@media screen and ${device.tabletL} and (min-width: 426px){
+  font-size: 50px;
+}
   font-family: "AlphaMack AOE";
   color: #ee2e31;
   font-size: 90px;
@@ -52,18 +67,15 @@ export const TourWelcomeRedTitle = styled.span`
   font-style: normal;
   text-transform: capitalize;
   text-align: left;
-  margin-top: -6%;
-  line-height:${props => props.lineHeight || 'auto'};
+  margin-top: -25px;
 `;
 
 export const Visual = styled.img`
-  @media(max-width: 768px) {
-    padding-bottom: 0px;
-    max-width: 100%;
-  }
-  max-width: 60%;
+@media screen and ${device.tabletL} and (min-width: 426px){
+  max-width: 80%;
+}
+  max-width: 100%;
   height: auto;
-  padding-bottom: 20%;
 `;
 
 export const PlayButton = styled.button`
@@ -72,7 +84,7 @@ export const PlayButton = styled.button`
   font-size: 36px;
   border-radius: 10px;
   border: none;
-  width: 175px;
+  width: 141px;
   height: 88px;
   outline: none;
   box-shadow: 5px 10px #888888;
@@ -82,30 +94,6 @@ export const PlayButton = styled.button`
   box-shadow: none;
   transition: 0.3s;
 }
-`;
-
-export const BlackTitle = styled.h2`
-  font-family: "Work Sans", sans-serif;
-  font-size: 96px;
-  font-weight: bold;
-  color: #303030;
-  text-transform: uppercase;
-  text-align: left;
-`;
-
-export const RedSubTitle = styled.h3`
-  font-family: "AlphaMack AOE";
-  color: #ee2e31;
-  font-size: 120px !important;
-  font-weight: normal;
-  font-style: normal;
-  text-transform: capitalize;
-  text-align: left;
-  margin-top: -10%;
-  margin-bottom: 10%;
-  @media (max-width: 425px) {
-    font-size: 58px !important;
-  }
 `;
 
 export const DialogContent = styled.div`
@@ -123,8 +111,6 @@ export const DialogDescription = styled.p`
   font-weight: 900;
   text-align: center;
 `;
-
-
 
 export const Iframe = styled.iframe`
   height: 600px;

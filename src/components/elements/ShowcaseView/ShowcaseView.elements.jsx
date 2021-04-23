@@ -1,42 +1,61 @@
+/*
+/ last updated: 19/04/2021
+/ @author: mahenza
+*/
 import styled from "styled-components";
+import device from "../../utils/device";
 
-export const ContentWrapper = styled.div`
-  @media(max-width: 768px) {
-    flex-direction: column-reverse;
-  }
+export const ContentWrapper = styled.div`#
+@media only screen and ${device.tabletL}{
+  padding-top: 80%;
+}
   width: 100%;
   display: flex;
 `;
 
+export const Row = styled.div`
+  display: flex;
+  width: 100%;
+`;
+
+export const Side = styled.div`
+@media screen and ${device.tabletL} and (min-width: 426px){
+  flex: 30%;
+  padding: 5px;
+}
+  flex: 50%;
+  padding: 20px;
+  align-self: center;
+`;
+
+export const Main = styled.div`
+@media screen and ${device.tabletL} and (min-width: 426px){
+  flex: 70%;
+  align-self: flex-start;
+}
+  flex: 50%;
+  align-self: flex-end;
+`;
 export const Showcase = styled.div`
-  @media(max-width: 768px) {
-    width: 100%;
-    padding-top: 5%;
-  }
   display: flex;
   flex-direction: column;
-  width: 50%;
-  padding-top: 20%;
 `;
 
 export const ShowcaseGroup = styled.div`
   display: flex;
-  align-items: center;
-  text-align: left;
-  width: 90%;
 `;
 
 export const ShowcaseTitle = styled.div`
   display: flex;
-  align-items: left;
+  flex-direction: column;
 `;
 
 export const ShowcaseBlackTitle = styled.h2`
-  @media(max-width: 768px) {
-    font-size: 32px;
-  }
+@media screen and ${device.tabletL} and (min-width: 426px){
+  font-size: 20px;
+}
   font-family: "Work Sans", sans-serif;
-  font-size: 60px;
+  font-size: 50px;
   font-weight: bold;
   color: #303030;
   text-transform: uppercase;
@@ -44,9 +63,9 @@ export const ShowcaseBlackTitle = styled.h2`
 `;
 
 export const ShowcaseRedTitle = styled.span`
-  @media(max-width: 768px) {
-    font-size: 64px;
-  }
+@media screen and ${device.tabletL} and (min-width: 426px){
+  font-size: 50px;
+}
   font-family: "AlphaMack AOE";
   color: #ee2e31;
   font-size: 90px;
@@ -57,14 +76,11 @@ export const ShowcaseRedTitle = styled.span`
 `;
 
 export const Visual = styled.img`
-  @media(max-width: 768px) {
-    max-width: 100%;
-    padding-top: 1%;
-    margin-bottom: -32px;
-  }
-  max-width: 60%;
+@media screen and ${device.tabletL} and (min-width: 426px){
+  max-width: 70%;  
+}
+  max-width: 100%;
   height: auto;
-  padding-top: 15%;
 `;
 
 export const ShowcaseFrame = styled.iframe`
@@ -75,7 +91,4 @@ export const ShowcaseFrame = styled.iframe`
   width: 100%;
   height: auto;
   border: none;
-@media (min-width: 320px) and (max-width: 760px) {
-    display: none;
-  }
 `;

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { FaMobile } from "react-icons/fa"
 import { profileFullNameStorage } from '../../../utils/storage';
 
 import TourWelcomeView from '../../elements/TourWelcomeView/TourWelcomeView';
@@ -31,47 +32,39 @@ function WebTour ({ fullName }) {
       <div className="topbar">
         <img src="http://in-poin.mahenza.com/wp-content/uploads/2021/02/inpoin_logo_svg.png" />
       </div>
+      <div className="tilt-me-display">
+        <img src="http://in-poin.mahenza.com/wp-content/uploads/2021/02/inpoin_logo_svg.png" />
+        <h2 className="tilt-me-subheader">Feel The Gamification Experience</h2>
+        <FaMobile className="fa-rotate" style={{ fontSize: 60, width: '100%' }} />
+        <h3 className="tilt-me-header">
+          Rotate your device (90 &deg;)
+          </h3>
+      </div>
       <div className="outer-container">
         <div className="container-webtour">
-          <section id="tour-1">
-            <div className="content">
+          <section id="tour-1">        
               <TourWelcomeView fullName={fullName} onSuccessStartGame={handleSuccesStartGame} />
-            </div>
           </section>
           <section id="tour-2">
-            <div className="content">
               { showAboutInpoin && <AboutInpoinView /> }
-            </div>
           </section>
           <section id="tour-3">
-            <div className="content">
               <OurServicesView />
-            </div>
           </section>
           <section id="tour-4">
-            <div className="content">
               <ExperienceDashboardView />
-            </div>
           </section>
           <section id="tour-5">
-            <div className="content">
               <MyInpoinView />
-            </div>
           </section>
           <section id="tour-7">
-            <div className="content">
               <HowWeWorkView />
-            </div>
           </section>
           <section id="tour-8">
-            <div className="content">
               <ShowcaseView onSuccessStartGame={handleSuccesStartGame} />
-            </div>
           </section>
           <section id="tour-9">
-            <div className="content">
               <ExitTourView poin={poin} />
-          </div>
           </section>
         </div>
       </div>

@@ -5,14 +5,16 @@ import { ACTIVITY } from "../../../configs";
 import { Iframe, PlayButton, DialogContent } from "../TourWelcomeView/TourWelcomeView.elements";
 
 import {
-    ContentWrapper,
-    Showcase,
-    ShowcaseTitle,
-    ShowcaseBlackTitle,
-    ShowcaseRedTitle,
-    ShowcaseGroup,
-    ShowcaseFrame,
-    Visual,
+  ContentWrapper,
+  Row,
+  Side,
+  Main,
+  Showcase,
+  ShowcaseTitle,
+  ShowcaseBlackTitle,
+  ShowcaseRedTitle,
+  ShowcaseGroup,
+  Visual,
 } from "./ShowcaseView.elements";
 
 class ShowcaseView extends Component {
@@ -43,20 +45,24 @@ class ShowcaseView extends Component {
   render() {
     return (
       <ContentWrapper>
-        <Showcase>
-          <ShowcaseTitle>
-            <ShowcaseBlackTitle>
-                Experience our game and earn {'   '}
-                <ShowcaseRedTitle>Your Points!</ShowcaseRedTitle>
-            </ShowcaseBlackTitle>
-          </ShowcaseTitle>
-          <ShowcaseGroup>
-            <PlayButton onClick={this._handleStartLuckyEnvelope}>Let's Play</PlayButton>
-          </ShowcaseGroup>                   
-        </Showcase>
-        <Visual src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/visual-tour-8.png"></Visual>
-        {/* <ShowcaseFrame></ShowcaseFrame> */}
-        
+        <Row>
+          <Side>
+            <Showcase>
+              <ShowcaseTitle>
+                <ShowcaseBlackTitle>
+                    Experience our game and earn {'   '}
+                    <ShowcaseRedTitle>Your Points!</ShowcaseRedTitle>
+                </ShowcaseBlackTitle>
+              </ShowcaseTitle>
+              <ShowcaseGroup>
+                <PlayButton onClick={this._handleStartLuckyEnvelope}>Let's Play</PlayButton>
+              </ShowcaseGroup>                   
+            </Showcase>
+          </Side>
+          <Main>
+            <Visual src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/visual-tour-8.png"/>
+          </Main>
+        </Row>
       {this._renderDialogLuckySpin()}
       </ContentWrapper>
     );

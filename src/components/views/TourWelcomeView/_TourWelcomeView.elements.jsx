@@ -16,31 +16,29 @@ export const Row = styled.div`
 `;
 
 export const Side = styled.div`
-  flex: 60%;
-  padding: 20px;
 @media only screen and ${device.tabletL}{
   flex: 60%;
   padding: 5px;
 }
+  flex: 60%;
+  padding: 20px;
 `;
 
 export const Main = styled.div`
-  flex: 40%;
-  align-self: center;
-  // padding-top: 10%;
 @media only screen and ${device.tabletL}{
   flex: 40%;
   padding: 25px;
 }
+  flex: 40%;
+  align-self: center;
 `;
 
 export const TourWelcome = styled.div`
-  display: flex;
-  flex-direction: column;
-
 @media screen and(max-width: 1550px) and(min-width: 426px), (orientation: landscape){
   padding-top: 15%;
 }
+  display: flex;
+  flex-direction: column;
 `;
 
 export const TourWelcomeGroup = styled.div`
@@ -48,6 +46,9 @@ export const TourWelcomeGroup = styled.div`
 `;
 
 export const TourWelcomeBlackTitle = styled.h2`
+@media screen and ${device.tabletL} and (min-width: 426px){
+  font-size: 30px;
+}
   font-family: "Work Sans", sans-serif;
   font-size: 60px;
   font-weight: bold;
@@ -55,12 +56,12 @@ export const TourWelcomeBlackTitle = styled.h2`
   text-transform: uppercase;
   text-align: left;
   line-height: 100%;
-@media screen and ${device.tabletL} and (min-width: 426px){
-  font-size: 30px;
-}
 `;
 
 export const TourWelcomeRedTitle = styled.span`
+@media screen and ${device.tabletL} and (min-width: 426px){
+  font-size: 50px;
+}
   font-family: "AlphaMack AOE";
   color: #ee2e31;
   font-size: 90px;
@@ -68,16 +69,14 @@ export const TourWelcomeRedTitle = styled.span`
   font-style: normal;
   text-transform: capitalize;
   text-align: left;
-  // margin-top: -6%;
-@media screen and ${device.tabletL} and (min-width: 426px){
-  font-size: 50px;
-}
 `;
 
 export const Visual = styled.img`
+@media screen and ${device.tabletL} and (min-width: 426px){
+  max-width: 30%;
+}
   max-width: 100%;
   height: auto;
-  // padding-bottom: 20%;
 `;
 
 export const PlayButton = styled.button`

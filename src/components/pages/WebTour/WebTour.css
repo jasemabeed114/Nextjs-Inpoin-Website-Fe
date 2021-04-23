@@ -1,3 +1,7 @@
+/*
+/ last updated: 13/04/2021
+/ @author: mahenza
+*/
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@900&display=swap");
 @import url("../../../public/assets/fonts/alpha-mac-aoe/alpha-mac-aoe.css");
 * {
@@ -6,47 +10,46 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
-html, body, .outer-container, .container{
+html,
+body,
+.outer-container,
+.container {
   scroll-behavior: smooth;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 /*
-Navbar build 2021-03-21
---------------------------------------*/
+Drag functionality build 2021-03-23
+*/
+.draggable {
+  cursor: move; /* fallback: no `url()` support or images disabled */
+  cursor: url("http://in-poin.mahenza.com/wp-content/uploads/2021/03/home-icon.png"); /* fallback: Chrome 1-21, Firefox 1.5-26, Safari 4+, IE, Edge 12-14, Android 2.1-4.4.4 */
+  cursor: grab; /* W3C standards syntax, all modern browser */
+}
+
+.draggable:active {
+  cursor: url("http://in-poin.mahenza.com/wp-content/uploads/2021/03/home-icon.png");
+  cursor: grabbing;
+}
+
 .topbar {
   position: relative;
   width: 100%;
   z-index: 1;
   margin-top: 0;
-	background:transparent;
-	background-size: 100% 100%;
+  background: transparent;
+  background-size: 100% 100%;
   background-color: transparent;
-	background-repeat: no-repeat;	
-}
-.topbar img{
-  position :absolute;
-  top:20px;
-  left: 107px; 
-}
-
-.button {
-  position :absolute;
-  top:20px;
-  right: 107px; 
-  height :86px;
-  width :86px;
-  background: linear-gradient(180deg, #EE2D30 0%, #FE575A 100%);
-  border-radius: 50%; 
-  line-height: 87px;
-  text-align: center;
-  font-size: 40px;
-  color: white;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  background-repeat: no-repeat;
+} 
+.topbar img {
+  position: absolute;
+  top: 20px;
+  left: 40px;
 }
 
-/*
---------------------------------------eof Navbar build 2021-03-21
-*/
 
 .outer-container {
   width: 100vh;
@@ -70,59 +73,93 @@ Navbar build 2021-03-21
   transform: rotate(90deg) translateY(-100vh);
   transform-origin: top left;
 }
-@media(max-width: 768px) {
-  
-  .container-webtour section {
-    align-items: flex-end !important;
-
-  }
-}
 
 .container-webtour section {
   min-width: 100%;
-  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background: linear-gradient(270deg, #f1f2f7 -19.48%, #d9bbbe 100%);
-}
+  background-repeat: repeat-x;; 
+  background-size: cover;
+  }
 .container-webtour section:nth-child(2) {
-  background: linear-gradient(95.65deg, rgba(241, 242, 247, 0.8) -19.48%, rgba(217, 187, 190, 0.9) 100%),url('../../../public/assets/images/img-home/bg-home-overlay.svg'); 
-  /* background: linear-gradient(95.65deg, #f1f2f7 -19.48%, #d9bbbe 100%); */
-  z-index: 0;
+  background-size: contain;
+  background: linear-gradient(95.65deg, #f1f2f7 -19.48%, #d9bbbe 100%);
+  
 }
 .container-webtour section:nth-child(3) {
   background: linear-gradient(255.96deg, #a8d7ff 0%, #d9bbbe 100%);
 }
 .container-webtour section:nth-child(4) {
-  background: white;
+  background: linear-gradient(104.04deg, #a8d7ff 6.77%, #ec779e 100%);
 }
 .container-webtour section:nth-child(5) {
-  background: linear-gradient(68.61deg,#c5b2d3 -0.98%,#e9e0e5 25.66%,#d9bbbe 100%) ;
+  background: linear-gradient(284.04deg, #B1B7DD 0%, #E581A8 96.17%);
 }
 .container-webtour section:nth-child(6) {
-  background: linear-gradient(103.92deg, #b1b7dd 0%, #eb79a0 111.76%);
+  background: linear-gradient(75.96deg, #B1B7DD 25%, #FEECC9 90%);
 }
-.container section:nth-child(7) {
+.container-webtour section:nth-child(7) {
   background: linear-gradient(270.7deg, #ffbebe 0.64%, #feecc9 99.49%);
 }
 .container-webtour section:nth-child(8) {
   background: linear-gradient(270.7deg, #ff7979 0.64%, #ffbebe 99.49%);
 }
 
-@media(max-width: 768px) {
-  .container-webtour section .content {
-    padding: 16px !important;
+@media (max-width: 991px) {
+  div.scrollmenu {
+  overflow: auto;
+  white-space: nowrap;
+  }
+
+  div.scrollmenu a {
+    display: inline-block;
+    color: white !important;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+
+  div.scrollmenu a:hover {
+    background-color: white !important;
   }
 }
 
-.container-webtour section .content {
-  max-width: auto;
-  padding: 40px;
-  text-align: center;
+@media only screen and (max-width: 425px) {
+  .tilt-me-display{
+    padding-top: 5%;
+    display: -ms-grid;
+  }
+  .tilt-me-header{
+    padding-top: 15%;
+    font-family: "Work Sans", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #303030;
+    text-transform: uppercase;
+  }
+  .tilt-me-subheader{
+    font-family: "AlphaMack AOE";
+    color: #ee2e31;
+    font-size: 90px;
+    font-weight: normal;
+    font-style: normal;
+    text-transform: capitalize;
+    text-align: center;
+  }
 }
 
-.decoration-none {
-  text-decoration: none;
+@media screen and (max-width: 1550px) and (min-width: 426px), (orientation: landscape){
+  .tilt-me-display{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 950px) and (min-width: 426px){
+  .topbar img {
+    width: 15%;
+    left: 25px;
+  }
 }
