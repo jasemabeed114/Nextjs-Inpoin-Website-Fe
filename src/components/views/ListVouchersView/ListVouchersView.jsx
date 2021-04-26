@@ -14,6 +14,9 @@ import {
     VouchersImage,
 } from "./ListVouchersView.elements";
 
+import Swiper from '../../elements/Swiper/Swiper';
+import SwiperSlide from '../../elements/Swiper/SwiperSlide';
+
 class ListVouchersView extends Component {
     render() {
         return (
@@ -28,26 +31,30 @@ class ListVouchersView extends Component {
                         </Tilt>
                     </ListVouchers>
                     <Main>
-                        <Vouchers>
-                            <VouchersItem>
-                                <VouchersImage src="http://in-poin.mahenza.com/wp-content/uploads/2021/04/1.png"/>
-                            </VouchersItem>
-                            <VouchersItem>
-                                <VouchersImage src="http://in-poin.mahenza.com/wp-content/uploads/2021/04/2.png" />
-                            </VouchersItem>
-                            <VouchersItem>
-                                <VouchersImage src="http://in-poin.mahenza.com/wp-content/uploads/2021/04/3.png" />
-                            </VouchersItem>
-                            <VouchersItem>
-                                <VouchersImage src="http://in-poin.mahenza.com/wp-content/uploads/2021/04/4.png"/>
-                            </VouchersItem>
-                            <VouchersItem>
-                                <VouchersImage src="http://in-poin.mahenza.com/wp-content/uploads/2021/04/5.png" />
-                            </VouchersItem>
-                            <VouchersItem>
-                                <VouchersImage src="http://in-poin.mahenza.com/wp-content/uploads/2021/04/6.png"/>
-                            </VouchersItem> 
-                        </Vouchers>
+                        <Swiper slidePerView={1} spaceBetween={5} align={'center'}>
+                            <SwiperSlide>
+                                <Vouchers>
+                                    <VouchersItem>
+                                        <VouchersImage src="http://in-poin.mahenza.com/wp-content/uploads/2021/04/25.png"/>
+                                    </VouchersItem>
+                                    <VouchersItem>
+                                        <VouchersImage src="http://in-poin.mahenza.com/wp-content/uploads/2021/04/24.png" />
+                                    </VouchersItem>
+                                    <VouchersItem>
+                                        <VouchersImage src="http://in-poin.mahenza.com/wp-content/uploads/2021/04/26.png" />
+                                    </VouchersItem>
+                                    <VouchersItem>
+                                        <VouchersImage src="http://in-poin.mahenza.com/wp-content/uploads/2021/04/27.png"/>
+                                    </VouchersItem>
+                                    {/* <VouchersItem>
+                                        <VouchersImage src="http://in-poin.mahenza.com/wp-content/uploads/2021/04/5.png" />
+                                    </VouchersItem>
+                                    <VouchersItem>
+                                        <VouchersImage src="http://in-poin.mahenza.com/wp-content/uploads/2021/04/6.png"/>
+                                    </VouchersItem>  */}
+                                </Vouchers>
+                            </SwiperSlide>
+                        </Swiper>
                     </Main>
                 </Row>
             </ContentWrapper>

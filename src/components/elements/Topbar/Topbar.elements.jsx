@@ -24,15 +24,15 @@ export const Container = styled.div`
 
 & img{
   @media screen and ${device.tabletL} and (min-width: 426px){
-  width: 15%;
-  left: 25px;
+  width: 10%;
+  left: 15px;
   }
   @media screen and (orientation: portrait){
     display: none;
   }
     position: absolute;
-    width: 15%;
-    left: 5%;
+    width: 10%;
+    left: 3%;
     top: 20px;
 }
 `;
