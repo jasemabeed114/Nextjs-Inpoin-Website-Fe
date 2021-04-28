@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { FaDoorOpen } from "react-icons/fa"
 import Tilt from 'react-tilt';
 import Link from "next/link";
 
@@ -15,7 +16,7 @@ import {
     ExitScoringLogo,
     ExitTour,
     ExitTourTitle,
-
+    ExitButton,
 } from "./ExitTourView.elements";
 
 // This is just a sample function to make this code snippet work
@@ -75,11 +76,17 @@ class ExitTourView extends Component {
               <Link href="/?from=tour" >
                 <RedeemButton> Redeem Now </RedeemButton>
               </Link>
+              
             </ExitTour>
           </Side>
           <Main>
             <Visual src="http://in-poin.mahenza.com/wp-content/uploads/2021/03/visual-tour-9.png"></Visual>
           </Main>
+          <ExitButton>exit
+          <Link href="/?from=tour" >
+            <FaDoorOpen/>
+          </Link>
+          </ExitButton>
         </Row>
       </ContentWrapper>
     );

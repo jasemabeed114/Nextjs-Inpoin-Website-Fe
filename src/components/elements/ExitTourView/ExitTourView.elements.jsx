@@ -1,7 +1,7 @@
 //
 // last updated: 19/04/2021
 // @author: mahenza
-import styled from "styled-components";
+import styled, { keyframes } from 'styled-components';
 import device from "../../utils/device";
 
 export const ContentWrapper = styled.div`
@@ -122,4 +122,36 @@ export const RedeemButton = styled.div`
     box-shadow: none;
     transition: 0.3s;
 }
+`;
+
+const slideInTop = keyframes`
+ 0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  85% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+`;
+
+export const ExitButton = styled.h5`
+@media screen and ${device.tabletL} and (min-width: 426px){
+  font-size: 30px;
+  padding-bottom: 3%;
+}
+  font-family: "AlphaMack AOE" !important;
+  font-size: 60px;
+  color: white !important;
+  align-self: flex-end;
+  font-weight: lighter !important;
+  animation: ${slideInTop} 3s ease-in infinite;
 `;
