@@ -1,8 +1,11 @@
 //
-// last updated: 16/04/2021
+// last updated: 20/05/2021
+// - adding embeded youtube video
 // @author: mahenza
 import React, { Component } from "react";
 import Tilt from 'react-tilt';
+
+import YoutubeEmbed from '../../elements/YoutubeEmbed/YoutubeEmbed';
 
 import {
   ContentWrapper,
@@ -121,15 +124,14 @@ class _OurServicesView extends Component {
             </Services>     
           </Side>
           <Main>
-            <VideoFrame contenteditable="true"
-              src="http://in-poin.mahenza.com/wp-content/uploads/2021/02/WhatsApp-Video-2021-02-27-at-3.59.12-PM.mp4?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&mute=1"
+            <YoutubeEmbed embedId="mdeRjAZBeQI" />
+            {/* <VideoFrame contenteditable="true"
+              src="https://youtu.be/mdeRjAZBeQI"
               frameborder="0"
-              controls
-              autoplay 
-              muted
-              allow="accelerometer"
+              controls 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen="allowfullscreen"
-              type="video/mp4"></VideoFrame>
+              type="video/mp4"></VideoFrame> */}
           </Main>
         </Row>
       </ContentWrapper>

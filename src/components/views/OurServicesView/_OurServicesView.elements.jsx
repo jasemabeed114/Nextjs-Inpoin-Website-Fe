@@ -363,7 +363,7 @@ export const IconsTitle = styled.span`
   line-height: 150%;
 `;
 
-export const VideoFrame = styled.video`
+export const VideoFrame = styled.iframe`
 @media screen and ${device.tabletL} and (min-width: 426px){
   height: 70vh;
 }

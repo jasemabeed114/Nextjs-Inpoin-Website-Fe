@@ -53,7 +53,7 @@ class ShowcaseView extends Component {
               <Tilt className="Tilt" options={{ max: 35 }} >
               <ShowcaseTitle>
                 <ShowcaseBlackTitle>
-                    Experience our game and earn {'   '}
+                    Experience our mini-game and earn {'   '}
                     <ShowcaseRedTitle>Your Points!</ShowcaseRedTitle>
                 </ShowcaseBlackTitle>
               </ShowcaseTitle>

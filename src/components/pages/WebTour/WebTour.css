@@ -1,5 +1,5 @@
 /*
-/ last updated: 13/04/2021
+/ last updated: 16/05/2021
 / @author: mahenza
 */
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@900&display=swap");
@@ -62,9 +62,9 @@ Drag functionality build 2021-03-23
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   display: none;
-}
+} */
 
 .container-webtour {
   width: 100vw;
@@ -135,7 +135,7 @@ Drag functionality build 2021-03-23
   .tilt-me-header{
     padding-top: 15%;
     font-family: "Work Sans", sans-serif;
-    font-size: 30px;
+    font-size: 16px;
     font-weight: bold;
     color: #303030;
     text-transform: uppercase;

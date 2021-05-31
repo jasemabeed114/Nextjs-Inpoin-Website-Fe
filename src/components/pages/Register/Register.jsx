@@ -1,7 +1,14 @@
+//
+// last updated: 16/05/2021
+// - adding topbar elements
+// @author: msrizki
 import Link from 'next/link';
 import React, { Component } from 'react';
 import SignUpForm from '../../elements/SignUpForm/SignUpForm';
 import OtpForm from '../../elements/OtpForm/OtpForm';
+import {
+  Topbar
+} from "../../index";
 import { FaMobile } from "react-icons/fa"
 
 class Register extends Component {

@@ -131,27 +131,27 @@ class ContactUsView extends Component {
                                     <TableIcon>
                                         <ul>
                                             <li>
-                                                <Link href="#">
+                                                <Link onClick={() => window.open("https://instagram.com/inpoin.id?utm_medium=copy_link", "_blank")}>
                                                     <InstagramIcon />
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="#">
+                                                <Link onClick={() => window.open("https://twitter.com/inpoin_id?s=11", "_blank")}>
                                                     <TwitterIcon />
                                                 </Link>     
                                             </li>
                                             <li>
-                                                <Link href="#">
+                                                <Link onClick={() => window.open("https://www.facebook.com/inpoin.id/", "_blank")}>
                                                     <FacebookIcon />
                                                 </Link>      
                                             </li>
                                             <li>
-                                                <Link href="#">
+                                                <Link onClick={() => window.open("https://youtube.com/channel/UCrPwO0di574N7QdZfQEUy9g", "_blank")}>
                                                     <YoutubeIcon />
                                                 </Link>      
                                             </li>
                                             <li>
-                                                <Link href="#">
+                                                <Link onClick={() => window.open("https://www.linkedin.com/company/inpoin", "_blank")}>
                                                     <LinkedInIcon/>
                                                 </Link>
                                             </li>
@@ -240,27 +240,27 @@ class ContactUsView extends Component {
                                     <TableIcon>
                                         <ul>
                                             <li>
-                                                <Link href="#">
+                                                <Link onClick={() => window.open("https://instagram.com/inpoin.id?utm_medium=copy_link", "_blank")}>
                                                     <InstagramIcon />
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="#">
+                                                <Link onClick={() => window.open("https://twitter.com/inpoin_id?s=11", "_blank")}>
                                                     <TwitterIcon />
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="#">
+                                                <Link onClick={() => window.open("https://www.facebook.com/inpoin.id/", "_blank")}>
                                                     <FacebookIcon />
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="#">
+                                                <Link onClick={() => window.open("https://youtube.com/channel/UCrPwO0di574N7QdZfQEUy9g", "_blank")}>
                                                     <YoutubeIcon />
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="#">
+                                                <Link onClick={() => window.open("https://www.linkedin.com/company/inpoin", "_blank")}>
                                                     <LinkedInIcon />
                                                 </Link>
                                             </li>

@@ -2,6 +2,9 @@ import Link from 'next/link';
 import React, { Component } from 'react';
 import SignInForm from '../../elements/SignInForm/SignInForm';
 import OtpForm from '../../elements/OtpForm/OtpForm';
+import {
+  Topbar
+} from "../../index";
 import { FaMobile } from "react-icons/fa"
 
 class Login extends Component {
@@ -27,11 +30,7 @@ class Login extends Component {
     const { showOtpForm, mobilePhone } = this.state;
     return (
       <>
-        <div className="topbar">
-          <Link href="/">
-            <img src="http://in-poin.mahenza.com/wp-content/uploads/2021/02/inpoin_logo_svg.png"/>
-          </Link>
-        </div>
+        <Topbar/>
         <div className="tilt-me-display">
           <img src="http://in-poin.mahenza.com/wp-content/uploads/2021/02/inpoin_logo_svg.png" />
           <h2 className="tilt-me-subheader">Feel The Gamification Experience</h2>

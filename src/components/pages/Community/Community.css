@@ -1,5 +1,5 @@
 /*
-/ last updated: 16/04/2021
+/ last updated: 16/05/2021
 / @author: mahenza
 */
 
@@ -30,9 +30,9 @@
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   display: none;
-}
+} */
 
 .container-community {
   width: 100vw;
@@ -102,7 +102,7 @@
   .tilt-me-header{
     padding-top: 15%;
     font-family: "Work Sans", sans-serif;
-    font-size: 30px;
+    font-size: 16px;
     font-weight: bold;
     color: #303030;
     text-transform: uppercase;

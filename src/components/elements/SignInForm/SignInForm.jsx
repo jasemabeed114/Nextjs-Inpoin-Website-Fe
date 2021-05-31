@@ -1,4 +1,10 @@
+//
+// last updated: 15/06/2021
+// - replacing DataInput with materialUI TextField
+// - changing link color
+// @author: msrizki
 import React, { useState, useEffect } from 'react';
+import TextField from '@material-ui/core/TextField';
 import { nanoid } from 'nanoid';
 import Link from 'next/link';
 import {
@@ -59,12 +65,23 @@ function SignUpForm({ onSuccess, onFailed }) {
             <DataLabel>Contact Number</DataLabel>
             <ImportantSign>*</ImportantSign>
           </DataLabelGroup>
-          <DataInput
+          {/* <DataInput
             onChange={handleChangeMobilePhone}
             onFocus={clearErrorMessage}
             placeholder={'62'}
             required
             type="tel"
+            value={mobilePhone}
+          /> */}
+          <TextField
+            id="filled-helperText"
+            onChange={handleChangeMobilePhone}
+            onFocus={clearErrorMessage}
+            placeholder={'62'}
+            required
+            type="tel"
+            variant="outlined"
+            size="small"
             value={mobilePhone}
           />
         </DataGroup>
@@ -73,20 +90,36 @@ function SignUpForm({ onSuccess, onFailed }) {
             <DataLabel>PIN</DataLabel>
             <ImportantSign>*</ImportantSign>
           </DataLabelGroup>
-          <DataInput
+          {/* <DataInput
             inputmode="numeric"
             maxlength="6"
             minlength="6"
             onChange={handleChangePin}
             onFocus={clearErrorMessage}
+            placeholder={'XXXX'}
             required
             type="password"
+            value={pin}
+          /> */}
+          <TextField
+            id="filled-helperText"
+            inputmode="numeric"
+            inputProps={{ maxLength: 6 }}
+            onChange={handleChangePin}
+            onFocus={clearErrorMessage}
+            placeholder={'XXXXXX'}
+            required
+            helperText="6 digits authentication PIN"
+            type="password"
+            variant="outlined"
+            size="small"
             value={pin}
           />
         </DataGroup>
         {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
         <SubmitButton onClick={handleSubmit}>Sign In</SubmitButton>
-        <p>Don't have an account?, <Link href="/register">Register</Link> </p>
+        <p>Don't have an account? <Link href="/register"><span style={{ color: 'red' }}>Register</span></Link> </p>
+        
       </Form>
     </Container>
   );

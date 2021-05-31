@@ -39,110 +39,122 @@ class ListPartnersFAQView extends Component{
 
     const faq = [
       { 
-        title: 'Apa itu inpoin?',
-        description: 'Inpoin sebagai suatu platform, merupakan solusi yang memiliki keunggulan untuk membangun pelanggan setia, mendorong hubungan pelanggan yang berkelanjutan, pemberian reward (point/coin/miles) yang menarik melalui pendekatan gamification yang beragam.' 
+        title: 'What is Inpoin?',
+        description: 'Inpoin is a gamification platform. Inpoin helps enterprises to retain customers and build loyal customers. With its gamification capability, Inpoin encourages customers to continuously engage with the product,experience the challenge, and get the rewards.'
       },
       {
-        title: 'Apa keuntungan menggunakan platform inpoin?',
+        title: 'What are the advantages of using the Inpoin platform?',
         description: (
           <ul>
             <li>
-              Fitur gamification yang lengkap mulai dari elemen dasar seperti point, experience point, level, badges, leaderboard, rules, target, mission dan berbagai permainan keberuntungan (lucky spin)
+              Easily to use and to set up your gamification rules/target/mission beyond ‘transaction-gamification’.
             </li>
               <li>
-                Proses integrasi yang mudah dan cepat karena setiap service inpoin disediakan dalam bentuk API untuk dapat diintegrasikan dengan API atau service di sisi pelanggan
+              Various game mechanics such as points, experience points, levels, badges, leaderboard, rules,
+              targets, missions, and various mini-games such as lucky spin, lucky cards, lucky envelope and
+              lucky ‘celengan’ to give extra points.
               </li>
             <li>
-               Mudah dalam melakukan pengaturan dan monitoring gamification. Inpoin menyediakan web dashboard sebagai sarana untuk dapat merumuskan rancangan gamification serta melihat produktivitas setiap user, rule yang paling banyak diminati, dan user yang memiliki value terbesar.
+              Easy to integrate with any platform or digital touchpoints through our API.
+            </li>
+            <li>
+              Easily and effectively monitor all customers gamification activities and your business
+              performance by combining all data sources into a single, beautiful dashboard.
             </li>
           </ul>
         )
       },
       {
-        title: 'Bagaimana cara mendapatkan akun di dashboard inpoin?',
-        description: 'Silahkan hubungi tim inpoin untuk membantu Anda membuatkan akun di dashboard inpoin untuk melakukan pengaturan dan monitoring program gamification'
+        title: 'How can I subscribe to Inpoin?',
+        description: 'Please send an email to hello@inpoin.id, or via whatsapp/message to +62 812-2423-2101.'
       },
       {
-        title: 'Bagaimana cara login ke dashboard inpoin?',
+        title: 'How do I log in to the Inpoin dashboard?',
         description: (
           <>
             <ol>
                 <li>
-                  Kunjungi link https://dashboard-gamification.inpoin.id/login
+                  Visit https://dashboard-gamification.inpoin.id/login
                 </li>
                 <li>
-                  Masukkan username dan password yang telah diberikan admin inpoin
+                  Fill in your username and password
                 </li>
                   <li>
-                    Klik Masuk.
+                  Enjoy your gamification zone
                   </li>
               </ol>
-              <p>Jika username dan password yang dimasukkan sudah benar, Anda akan langsung masuk ke halaman dashboard inpoin </p>
+              <br/>
+            <p>If the entered username and password are correct, you will immediately be directed to the Inpoin dashboard page. </p>
           </>
         )
       },
       {
-        title: 'Jika lupa dengan username dan password, bagaimana cara mengembalikannya?',
+        title: 'If I forget my username and password, how do I recover my account?',
         description: (
           <>
             <ol>
-              <li>Klik lupa password </li>
-              <li>Masukkan email yang telah terdaftar di inpoin </li>
-              <li>Klik kirim. Sistem kami akan mengirimkan link ke email Anda untuk mendapatkan password baru.</li>
+              <li>Click “Forgot Password” </li>
+              <li>Enter the email that has been registered in Inpoin </li>
+              <li>Click send, and wait for an email from our system to receive a link to enter your new password.</li>
             </ol>
-            <p>Jika mengalami kesulitan dalam memulihkan username dan password Anda, silahkan hubungi admin inpoin </p>
+            <br/>
+            <p>If you have trouble recovering your username and password, please contact Inpoin admin.  </p>
           </>
         )
       },
       {
-        title: 'Bagaimana cara melakukan pengaturan gamification di dashboard inpoin?',
+        title: 'How can I set up my gamification in Inpoin?',
         description: (
           <>
             <p>
-              Untuk dapat menjalankan gamification pada aplikasi/website Anda, lakukan pengaturan di dashboard inpoin. Tahapan pengaturan dilakukan sebagai berikut :
+              You need to login to Inpoin dashboard. The steps you need to set up your gamification design are:
             </p>
+            <br/>
             <ol>
               <li>
-                Konfigurasi Level Group dan Level Detail
+                Configure Group Level and Detailed Level
               </li>
               <li>
-                Konfigurasi Rule
+                Configuration Rule
               </li>
               <li>
-                Konfigurasi Target
+                Configuration Target
               </li>
               <li>
-                Konfigurasi Mission
+                Configuration Mission
               </li>
               <li>
-                Konfigurasi Karma System
+                Configuration Karma System
               </li>
               <li>
-                Konfigurasi Rewards
+                Configuration Rewards Configuration
               </li>
             </ol>
           </>
         )
       },
       {
-        title: 'Bagaimana cara melakukan konfigurasi level group di dashboard inpoin?',
+        title: 'How can I configure Group Level in Inpoin?',
         description: (
           <>
             <ol>
               <li>
-                Pilih menu level
+                Select the level menu
               </li>
               <li>
-                Klik tombol “Tambah Level Group”
+                Click the button "Add Group Level"
               </li>
               <li>
-                Isi informasi level group
+                Fill in the group level information
               </li>
                 <li>
-                  Upload gambar
+                Upload image
               </li>
               <li>
-                Klik “Simpan”
+                Set the activation status
+              </li>
+              <li>
+                Click "Save"
               </li>
             </ol>
           </>
@@ -229,11 +241,10 @@ class ListPartnersFAQView extends Component{
               <MobileDescription>
                 Peoples usually ask about
               </MobileDescription>
-              <ReadMoreButton href="https://inpoin.id/myinpoin/faq" rel="noopener noreferrer nofollow" target="_blank">
+              <ReadMoreButton onClick={() => window.open("http://inpoin.id/myinpoin/faq", "_blank")}>
                 Read More..
               </ReadMoreButton>
             </div>
-
             <div style={{ flex: 1, alignSelf: 'center' }}>
                 <FAQWrapper>
                   <Accordion data={faq} />

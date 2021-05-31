@@ -1,6 +1,7 @@
 //
 // last updated: 21/04/2021
 // - removing container background for mobile display
+// - adding column
 // @author: mahenza
 import styled from "styled-components";
 import device from "../../utils/device"
@@ -25,7 +26,20 @@ export const Container = styled.div`
   /*background: linear-gradient(95.65deg, #f1f2f7 -19.48%, #d9bbbe 100%);*/
 `;
 
+export const Column = styled.div`
+  float: left;
+  width: 100%;
+  padding: 10px;
+
+&. col-left{
+  width: 10%;
+}
+`;
+
 export const Form = styled.form`
+@media screen and ${device.tabletL} and (min-width: 426px) {
+    height: 280px;
+  }
   display: flex;
   flex-direction: column;
   /* margin: 10px 20vw; */
@@ -36,6 +50,7 @@ export const Form = styled.form`
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   background: white;
+  overflow-x:auto;
 `;
 
 export const DataGroup = styled.div`
@@ -78,6 +93,7 @@ export const SubmitButton = styled.button`
   border: none;
   height: 30px;
   margin: 0 0 10px 0;
+  padding: 4px;
   outline: none;
   background: #EE2D30;
 &:active {

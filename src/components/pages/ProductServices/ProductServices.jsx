@@ -1,3 +1,7 @@
+//
+// last updated: 16/05/2021
+// - switching myinpoin views with game mechanics views 
+// @author: mahenza
 import React, { Component } from "react";
 import { FaMobile } from "react-icons/fa"
 
@@ -27,20 +31,21 @@ class ProductServices extends Component {
                 <div className="outer-container scrollmenu">
                     <div className="container-product-services draggable">
                         <section>
-                            <UnderConstruction />
+                            {/* <UnderConstruction /> */}
+                            <GameMechanicsView />
                         </section>
                         <section>
                             <_ShowcaseView />
                         </section>
                         <section>
-                            <GameMechanicsView/>
-                        </section>
-                        <section>
                             <_HowWeWorkView />
                         </section>
                         <section>
-                            <ListVouchersView/>
+                            <_MyInpoinView />
                         </section>
+                        {/* <section>
+                            <ListVouchersView/>                     
+                        </section> */}
                     </div>
                 </div>
             </>

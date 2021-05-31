@@ -1,6 +1,8 @@
 //
 // last updated: 21/04/2021
 // - adding custom sizing for logo item
+// last updated: 16/05/2021
+// - resizing partner logo for mobile 
 // @author: mahenza
 import styled from "styled-components";
 import device from "../../utils/device"
@@ -20,7 +22,8 @@ export const ListPartnerFAQ = styled.div`
 
 export const ListPartnerFAQGroup = styled.div`
 @media screen and ${device.tabletL} and (min-width: 426px) {
-    display: none;
+    // display: none;
+    width: 60%;
   }
   display: flex;
   flex-direction: row;
@@ -109,14 +112,19 @@ export const LogoWrapper = styled.div`
 
 export const Logo = styled.img`
   width: 100%;
-  //height: 54px;
 
 &.item-2{
+  @media screen and ${device.tabletL} and (min-width: 426px) {
+    padding-left: 15px;
+  }
   width: 70%;
   padding-left: 20px;
 }
 
 &.item-3{
+  @media screen and ${device.tabletL} and (min-width: 426px) {
+    padding-left: 15px;
+  }
   width: 70%;
   padding-left: 20px;
 }
